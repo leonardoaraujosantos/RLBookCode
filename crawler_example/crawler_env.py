@@ -27,7 +27,7 @@ class CrawlingRobotEnv(Env):
             self.root.destroy()
             self.root = None
 
-    def __init__(self, horizon=np.inf, render=False):
+    def __init__(self, horizon=np.inf, render=False, invert_reward=False):
         if render:
             import tkinter
             for env in all_envs:
@@ -65,28 +65,25 @@ class CrawlingRobotEnv(Env):
         self._stepCount = 0
         self.horizon = horizon
 
-        # def update_gui():
-        #     robot.draw(self.stepCount, )
-        # update_gui()
-
         # The state is of the form (armAngle, handAngle)
         # where the angles are bucket numbers, not actual
         # degree measurements
         self.state = None
+        self.invert_reward = invert_reward
 
-        self.nArmStates = 9
+        # Number of possible states per actuator
+        # On the Lego Robot it will be 3, 3
+        self.nArmStates = 7
         self.nHandStates = 13
 
         # create a list of arm buckets and hand buckets to
         # discretize the state space
-        minArmAngle, maxArmAngle = self.crawlingRobot.get_min_max_arm_angles()
-        minHandAngle, maxHandAngle = self.crawlingRobot.get_min_max_hand_angles()
-        armIncrement = (maxArmAngle - minArmAngle) / (self.nArmStates - 1)
-        handIncrement = (maxHandAngle - minHandAngle) / (self.nHandStates - 1)
-        self.armBuckets = [minArmAngle + (armIncrement * i) \
-                           for i in range(self.nArmStates)]
-        self.handBuckets = [minHandAngle + (handIncrement * i) \
-                            for i in range(self.nHandStates)]
+        min_arm_angle, max_arm_angle = self.crawlingRobot.get_min_max_arm_angles()
+        min_hand_angle, max_hand_angle = self.crawlingRobot.get_min_max_hand_angles()
+        arm_increment = (max_arm_angle - min_arm_angle) / (self.nArmStates - 1)
+        hand_increment = (max_hand_angle - min_hand_angle) / (self.nHandStates - 1)
+        self.armBuckets = [min_arm_angle + (arm_increment * i) for i in range(self.nArmStates)]
+        self.handBuckets = [min_hand_angle + (hand_increment * i) for i in range(self.nHandStates)]
 
         self.action_space = spaces.Discrete(4)
         self.observation_space = spaces.Tuple(
@@ -129,42 +126,44 @@ class CrawlingRobotEnv(Env):
         """
         if self.stepCount >= self.horizon:
             raise Exception("Horizon reached")
-        nextState, reward = None, None
 
-        oldX, oldY = self.crawlingRobot.get_robot_position()
-        armBucket, handBucket = self.state
+        old_x, old_y = self.crawlingRobot.get_robot_position()
+        arm_bucket, hand_bucket = self.state
 
         if a in self._legal_actions(self.state):
             if a == 0:
-                newArmAngle = self.armBuckets[armBucket - 1]
-                self.crawlingRobot.move_arm(newArmAngle)
-                nextState = (armBucket - 1, handBucket)
+                new_arm_angle = self.armBuckets[arm_bucket - 1]
+                self.crawlingRobot.move_arm(new_arm_angle)
+                next_state = (arm_bucket - 1, hand_bucket)
             elif a == 1:
-                newArmAngle = self.armBuckets[armBucket + 1]
-                self.crawlingRobot.move_arm(newArmAngle)
-                nextState = (armBucket + 1, handBucket)
+                new_arm_angle = self.armBuckets[arm_bucket + 1]
+                self.crawlingRobot.move_arm(new_arm_angle)
+                next_state = (arm_bucket + 1, hand_bucket)
             elif a == 2:
-                newHandAngle = self.handBuckets[handBucket - 1]
+                newHandAngle = self.handBuckets[hand_bucket - 1]
                 self.crawlingRobot.move_hand(newHandAngle)
-                nextState = (armBucket, handBucket - 1)
+                next_state = (arm_bucket, hand_bucket - 1)
             elif a == 3:
-                newHandAngle = self.handBuckets[handBucket + 1]
+                newHandAngle = self.handBuckets[hand_bucket + 1]
                 self.crawlingRobot.move_hand(newHandAngle)
-                nextState = (armBucket, handBucket + 1)
+                next_state = (arm_bucket, hand_bucket + 1)
             else:
                 raise Exception("action out of range")
         else:
-            nextState = self.state
+            next_state = self.state
 
-        newX, newY = self.crawlingRobot.get_robot_position()
+        new_x, new_y = self.crawlingRobot.get_robot_position()
 
         # a simple reward function
-        reward = newX - oldX
+        reward = new_x - old_x
+        if self.invert_reward:
+            # This will invert the direction
+            reward *= -1
 
-        self.state = nextState
+        self.state = next_state
         self.stepCount += 1
 
-        return tuple(nextState), reward, self.stepCount >= self.horizon, {}
+        return tuple(next_state), reward, self.stepCount >= self.horizon, {}
 
     def render(self, mode='human', close=False):
         pass

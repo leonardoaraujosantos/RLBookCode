@@ -28,7 +28,7 @@ while i < num_iterations_train:
     if i % 5000 == 0:
         print("average_reward in last 5000 steps", total_reward / i)
         # Stop training if total reward is big enough
-        if (total_reward / i) > 1.3:
+        if (total_reward / i) > 1.2:
             break
         average_reward = 0
         env.render = False
