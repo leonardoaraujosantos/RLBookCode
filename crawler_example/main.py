@@ -2,6 +2,8 @@ from agent import Q_Agent
 from crawler_env import CrawlingRobotEnv
 
 all_rewards = 0
+# On this reference environment the action space is 4 (simpler than lego)
+# Also it's state space is a bit more complex, including velocities, arm positions, etc...
 env = CrawlingRobotEnv(render=False)
 current_state = env.reset()
 agent = Q_Agent(env, gamma=0.9, alpha=0.2)
@@ -9,7 +11,7 @@ total_reward = 0
 num_iterations_train = 900000
 
 # Get the action space
-print('Robot action space:', env.action_space)
+print('Robot action space:', env.action_space.n)
 print('Robot state-space:', env.observation_space)
 
 # Training
@@ -18,7 +20,7 @@ while i < num_iterations_train:
     i = i + 1
     action = agent.choose_action(current_state)
     next_state, reward, done, info = env.step(action)
-    agent.update_q(current_state, action, reward, next_state)
+    agent.update_q_table(current_state, action, reward, next_state)
     current_state = next_state
     total_reward += reward
 
