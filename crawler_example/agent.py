@@ -3,7 +3,9 @@ from collections import defaultdict
 import numpy as np
 
 """
-Implement Q Learning Agent
+Implement Q Learning Agent, the advantage of this TD (Model-Free) method
+is that we don't need to wait for a sequence of actions to update our 
+knowledge.
 """
 class Q_Agent():
     def __init__(self, env, gamma, alpha=0.2, e_greedy_prob=0.5):
