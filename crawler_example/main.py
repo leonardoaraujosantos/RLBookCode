@@ -12,7 +12,7 @@ num_iterations_train = 900000
 print('Robot action space:', env.action_space)
 print('Robot state-space:', env.observation_space)
 
-
+# Training
 i = 0
 while i < num_iterations_train:
     i = i + 1
@@ -32,13 +32,12 @@ while i < num_iterations_train:
         env.render = False
 
 
+# Evaluating
 env = CrawlingRobotEnv(render=True)
 current_state=env.reset()
 total_reward = 0
 # Force epsilon-greedy to always use the max Q
 agent.e_greedy_prob = 0
-
-print(agent.q_vals)
 
 i = 0
 while True:
