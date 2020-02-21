@@ -187,6 +187,7 @@ class CrawlingRobotEnv(Env):
         self.crawlingRobot.positions = [20, self.crawlingRobot.get_robot_position()[0]]
 
         self.stepCount = 0
+        return self.state
 
 
 class CrawlingRobot:

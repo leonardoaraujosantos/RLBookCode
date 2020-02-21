@@ -1,5 +1,6 @@
 from agent import Q_Agent
 from crawler_env import CrawlingRobotEnv
+import numpy as np
 
 all_rewards = 0
 # On this reference environment the action space is 4 (simpler than lego)
@@ -12,7 +13,7 @@ num_iterations_train = 900000
 
 # Get the action space
 print('Robot action space:', env.action_space.n)
-print('Robot state-space:', env.observation_space)
+print('Robot state-space:', np.prod([state.n for state in env.observation_space]))
 
 # Training
 i = 0

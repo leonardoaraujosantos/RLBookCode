@@ -11,7 +11,13 @@ class Q_Agent():
     def __init__(self, env, gamma, alpha=0.2, e_greedy_prob=0.5):
         self.gamma = gamma
         self.env = env
+        num_actions = env.action_space.n
+        num_states = np.prod([state.n for state in env.observation_space])
+        rows, cols = (num_states, num_actions) 
+        # This way (defaultdict and lambda) a new function will be dynamically generated
         self.q_val_table = defaultdict(lambda: np.array([0. for _ in range(env.action_space.n)]))
+        # Pythonic way to have 2d array (list of lists)
+        # self.q_val_table = [[0.]*cols]*rows
         self.alpha = alpha
         self.e_greedy_prob = e_greedy_prob
 
