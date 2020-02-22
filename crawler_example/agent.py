@@ -8,7 +8,7 @@ is that we don't need to wait for a sequence of actions to update our
 knowledge.
 """
 class Q_Agent():
-    def __init__(self, env, gamma, alpha=0.2, e_greedy_prob=0.5):
+    def __init__(self, env, gamma, alpha=0.2, e_greedy_prob=0.5, e_greedy_decay=0.01):
         self.gamma = gamma
         self.env = env
         num_actions = env.action_space.n
@@ -23,6 +23,7 @@ class Q_Agent():
 
         self.alpha = alpha
         self.e_greedy_prob = e_greedy_prob
+        self.e_greedy_decay = e_greedy_decay
 
     def choose_action(self, state):
         """
@@ -52,3 +53,10 @@ class Q_Agent():
 
         old_value = self.q_val_table[cur_state][action]
         self.q_val_table[cur_state][action] = old_value + self.alpha * (new_value - old_value)
+
+        # Decay epsion_greedy
+        self.e_greedy_prob = self.exp_decay(self.e_greedy_prob)
+
+    def exp_decay(self, value):
+        y = value * (1 - self.e_greedy_decay)
+        return y
