@@ -75,6 +75,7 @@ class CrawlingRobotEnv(Env):
         # On the Lego Robot it will be 3, 3
         self.nArmStates = 7
         self.nHandStates = 13
+        self.tuple_2_state_idx = self.__get_tuple_2_index()
 
         # create a list of arm buckets and hand buckets to
         # discretize the state space
@@ -92,6 +93,16 @@ class CrawlingRobotEnv(Env):
 
         # Reset
         self.reset()
+
+    def __get_tuple_2_index(self):
+        arm_state_space, leg_state_space = self.nArmStates, self.nHandStates
+        tuple_2_index = {}
+        index = 0
+        for x in range(arm_state_space):
+            for y in range(leg_state_space):
+                tuple_2_index[(x, y)] = index
+                index += 1
+        return tuple_2_index
 
     @property
     def stepCount(self):
@@ -163,7 +174,10 @@ class CrawlingRobotEnv(Env):
         self.state = next_state
         self.stepCount += 1
 
-        return tuple(next_state), reward, self.stepCount >= self.horizon, {}
+        state_idx = self.tuple_2_state_idx[tuple(next_state)]
+
+        return state_idx, reward, self.stepCount >= self.horizon, {}
+        #return tuple(next_state), reward, self.stepCount >= self.horizon, {}
 
     def render(self, mode='human', close=False):
         pass
@@ -187,7 +201,10 @@ class CrawlingRobotEnv(Env):
         self.crawlingRobot.positions = [20, self.crawlingRobot.get_robot_position()[0]]
 
         self.stepCount = 0
-        return self.state
+        state_idx = self.tuple_2_state_idx[tuple(self.state)]
+        #return self.state
+        return state_idx
+
 
 
 class CrawlingRobot:
