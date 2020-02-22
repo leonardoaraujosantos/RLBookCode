@@ -27,7 +27,7 @@ class CrawlingRobotEnv(Env):
             self.root.destroy()
             self.root = None
 
-    def __init__(self, horizon=np.inf, render=False, invert_reward=False):
+    def __init__(self, horizon=np.inf, render=False, invert_reward=False, n_arms_state=7, n_hand_state=13, n_action=6):
         if render:
             import tkinter
             for env in all_envs:
@@ -73,8 +73,8 @@ class CrawlingRobotEnv(Env):
 
         # Number of possible states per actuator
         # On the Lego Robot it will be 3, 3
-        self.nArmStates = 7
-        self.nHandStates = 13
+        self.nArmStates = n_arms_state
+        self.nHandStates = n_hand_state
         self.tuple_2_state_idx = self.__get_tuple_2_index()
 
         # create a list of arm buckets and hand buckets to
@@ -86,7 +86,7 @@ class CrawlingRobotEnv(Env):
         self.armBuckets = [min_arm_angle + (arm_increment * i) for i in range(self.nArmStates)]
         self.handBuckets = [min_hand_angle + (hand_increment * i) for i in range(self.nHandStates)]
 
-        self.action_space = spaces.Discrete(4)
+        self.action_space = spaces.Discrete(n_action)
         self.observation_space = spaces.Tuple(
             [spaces.Discrete(self.nArmStates), spaces.Discrete(self.nHandStates)]
         )
@@ -141,6 +141,7 @@ class CrawlingRobotEnv(Env):
         old_x, old_y = self.crawlingRobot.get_robot_position()
         arm_bucket, hand_bucket = self.state
 
+        # TODO: Improvements for variable number of actions
         if a in self._legal_actions(self.state):
             if a == 0:
                 new_arm_angle = self.armBuckets[arm_bucket - 1]
