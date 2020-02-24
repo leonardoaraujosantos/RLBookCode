@@ -37,6 +37,7 @@ class Q_Agent():
         num_states = prod([state for state in range(env.observation_space)])
         rows, cols = (num_states, num_actions)
         self.num_actions = num_actions
+        self.num_states = num_states
 
         # Create the state-action table
         self.q_val_table = [[0.] * cols for _ in range(rows)]

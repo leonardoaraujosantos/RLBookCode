@@ -45,7 +45,7 @@ class CrawlingRobotEnv:
     This class will implement a similar environment interface as seen on openAI gym, but actually
     interface with a real world-robot (Lego)
     """
-    def __init__(self, invert_reward=False):
+    def __init__(self, invert_reward=False, step_angle=45):
         self.n_leg_state = 3
         self.n_feet_state = 3
         self.action_space = self.n_leg_state + self.n_feet_state
@@ -57,7 +57,7 @@ class CrawlingRobotEnv:
         self.feet_motor = Motor(Port.A)
         # Initialize sensor for getting distance
         self.infrared = InfraredSensor(Port.S1)
-        self.motor_step_angle = 30
+        self.motor_step_angle = step_angle
         # Dictionary to convert action indexes to motor commands
         self.action_2_arm = {0: (MotorType.LEG, MotorState.NEUTRAL),
                              1: (MotorType.LEG, MotorState.UP),
