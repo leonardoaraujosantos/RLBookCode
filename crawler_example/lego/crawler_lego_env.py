@@ -51,6 +51,19 @@ class CrawlingRobotEnv:
                              3: (MotorType.FEET, MotorState.NEUTRAL),
                              4: (MotorType.FEET, MotorState.UP),
                              5: (MotorType.FEET, MotorState.DOWN)}
+
+        # Dictionary to get the angles to move from one motor state to another, the key tuple is (previous, requested)
+        self.dict_angle = {
+            (MotorState.NEUTRAL, MotorState.NEUTRAL): 0,
+            (MotorState.NEUTRAL, MotorState.UP): self.motor_step_angle,
+            (MotorState.NEUTRAL, MotorState.DOWN): -self.motor_step_angle,
+            (MotorState.UP, MotorState.UP): 0,
+            (MotorState.UP, MotorState.NEUTRAL): -self.motor_step_angle,
+            (MotorState.UP, MotorState.DOWN): -2*self.motor_step_angle,
+            (MotorState.DOWN, MotorState.DOWN): self.motor_step_angle,
+            (MotorState.DOWN, MotorState.NEUTRAL): self.motor_step_angle,
+            (MotorState.DOWN, MotorState.UP): 2*self.motor_step_angle,
+        }
         # Populate dictionary to convert state tuple to state indexes
         self.state_2_index = self.__get_tuple_2_index()
         self.invert_reward = invert_reward
@@ -111,7 +124,8 @@ class CrawlingRobotEnv:
         :return: Next state after the action
         """
         motor, position = motor_action
-        angle = self.__position_2_angle(position)
+        # Convert state to list, make changes and bring back to tuple
+        self.state = list(self.state)
         # Get current leg/feet position
         curr_leg_pos = self.state[0]
         curr_feet_pos = self.state[1]
@@ -120,13 +134,17 @@ class CrawlingRobotEnv:
             if position != curr_leg_pos:
                 # Update state for motor 0
                 self.state[0] = position
+                angle = self.dict_angle[curr_leg_pos, position]
                 utils_motor.leg(angle, self.leg_motor, self.feet_motor)
         elif motor == MotorType.FEET:
             # Only change motor for different positions
             if position != curr_feet_pos:
                 # Update state for motor 1
                 self.state[1] = position
+                angle = self.dict_angle[curr_feet_pos, position]
                 utils_motor.feet(angle, self.feet_motor)
+        # Convert back to tuple
+        self.state = tuple(self.state)
         return self.state
 
     def __get_tuple_2_index(self):
