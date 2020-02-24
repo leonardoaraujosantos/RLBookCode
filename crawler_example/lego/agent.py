@@ -1,6 +1,28 @@
 #!/usr/bin/env pybricks-micropython
 import random
-import numpy as np
+
+
+def arg_max(list_input):
+    """
+    Return the index of the biggest element on the array
+    :param list_input: Input List
+    :return: index biggest element
+    """
+    biggest_element = max(list_input)
+    idx_max = list_input.index(biggest_element)
+    return idx_max
+
+
+def prod(list_input):
+    """
+    Return the reduce product of a list
+    :param list_input: Input List
+    :return: product of all elements on list
+    """
+    value = 1
+    for val in list_input:
+        value *= val
+    return value
 
 """
 Implement Q Learning Agent, the advantage of this TD (Model-Free) method
@@ -11,9 +33,10 @@ class Q_Agent():
     def __init__(self, env, gamma, alpha=0.2, e_greedy_prob=0.5, e_greedy_decay=0.01):
         self.gamma = gamma
         self.env = env
-        num_actions = env.action_space.n
-        num_states = np.prod([state.n for state in env.observation_space])
+        num_actions = env.action_space
+        num_states = prod([state for state in range(env.observation_space)])
         rows, cols = (num_states, num_actions)
+        self.num_actions = num_actions
 
         # Create the state-action table
         self.q_val_table = [[0.] * cols for _ in range(rows)]
@@ -28,12 +51,12 @@ class Q_Agent():
         :param state: Current state
         :return: Random or greedy action
         """
-        if random.random() < self.e_greedy_prob:
+        if (random.randint(0,100) / 100.) < self.e_greedy_prob:
             # randomly select action from state
-            action = np.random.choice(len(self.q_val_table[state]))
+            action = random.randint(0, self.num_actions-1)
         else:
             # greedily select action from state
-            action = np.argmax(self.q_val_table[state])
+            action = arg_max(self.q_val_table[state])
         return action
 
     def update_q_table(self, cur_state, action, reward, next_state):
@@ -45,7 +68,7 @@ class Q_Agent():
         :param next_state: Next state returned from the environment
         :return: None
         """
-        new_max_q = np.max(self.q_val_table[next_state])
+        new_max_q = max(self.q_val_table[next_state])
         new_value = reward + self.gamma * new_max_q
 
         old_value = self.q_val_table[cur_state][action]

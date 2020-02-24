@@ -6,24 +6,38 @@ from pybricks.parameters import Port, Stop, Button
 from pybricks.tools import print
 import utils_motor
 
-from enum import Enum
 
-
-class MotorState(Enum):
+class MotorState:
     """
     Possible positions this robot motor will have
+    we're doing this because there is no enum on Micropython
     """
     NEUTRAL = 0
     UP = 1
     DOWN = 2
 
+    @staticmethod
+    def val(val):
+        if val in [MotorState.NEUTRAL, MotorState.UP,  MotorState.DOWN]:
+            return val
+        else:
+            return None
 
-class MotorType(Enum):
+
+class MotorType:
     """
-    Enum to define the type of motors on this robot
+    Possible motor types on robot
+    we're doing this because there is no enum on Micropython
     """
     LEG = 0
     FEET = 1
+
+    @staticmethod
+    def val(val):
+        if val in [MotorType.LEG, MotorType.FEET]:
+            return val
+        else:
+            return None
 
 
 class CrawlingRobotEnv:
@@ -74,8 +88,8 @@ class CrawlingRobotEnv:
         if robot leg/feet are into neutral angles
         :return:
         """
-        self.base_motor.reset_angle(0.0)
         self.leg_motor.reset_angle(0.0)
+        self.feet_motor.reset_angle(0.0)
         self.state = (MotorState.NEUTRAL, MotorState.NEUTRAL)
         return self.state_2_index[self.state]
 
@@ -158,6 +172,6 @@ class CrawlingRobotEnv:
         index = 0
         for x in range(arm_state_space):
             for y in range(leg_state_space):
-                tuple_2_index[(MotorState(x), MotorState(y))] = index
+                tuple_2_index[(MotorState.val(x), MotorState.val(y))] = index
                 index += 1
         return tuple_2_index
