@@ -34,7 +34,7 @@ class Q_Agent():
         self.gamma = gamma
         self.env = env
         num_actions = env.action_space
-        num_states = prod([state for state in range(env.observation_space)])
+        num_states = env.observation_space
         rows, cols = (num_states, num_actions)
         self.num_actions = num_actions
         self.num_states = num_states
