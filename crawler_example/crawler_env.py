@@ -155,12 +155,12 @@ class CrawlingRobotEnv(Env):
                 self.crawlingRobot.move_arm(new_arm_angle)
                 next_state = (arm_bucket + 1, hand_bucket)
             elif a == 2:
-                newHandAngle = self.handBuckets[hand_bucket - 1]
-                self.crawlingRobot.move_hand(newHandAngle)
+                new_hand_angle = self.handBuckets[hand_bucket - 1]
+                self.crawlingRobot.move_hand(new_hand_angle)
                 next_state = (arm_bucket, hand_bucket - 1)
             elif a == 3:
-                newHandAngle = self.handBuckets[hand_bucket + 1]
-                self.crawlingRobot.move_hand(newHandAngle)
+                new_hand_angle = self.handBuckets[hand_bucket + 1]
+                self.crawlingRobot.move_hand(new_hand_angle)
                 next_state = (arm_bucket, hand_bucket + 1)
             else:
                 raise Exception("action out of range")
@@ -181,7 +181,6 @@ class CrawlingRobotEnv(Env):
         state_idx = self.tuple_2_state_idx[tuple(next_state)]
 
         return state_idx, reward, self.stepCount >= self.horizon, {}
-        #return tuple(next_state), reward, self.stepCount >= self.horizon, {}
 
     def render(self, mode='human', close=False):
         pass
