@@ -21,16 +21,16 @@ if __name__ == '__main__':
         action = agent.choose_action(current_state)
         next_state, reward, done, info = env.step(action)
         agent.update_q_table(current_state, action, reward, next_state)
-        print('steps:', steps, 'Reward:', reward, 'next_state:', next_state.e_greedy_prob, 'action:', action)
+        print('steps:', steps, 'Reward:', reward, 'next_state:', next_state, 'action:', action)
         current_state = next_state
 
     # Evaluate
     print(agent.q_val_table)
     # Only act greedly ...
-    agent.e_greedy_prob = 0.1
+    agent.e_greedy_prob = 0.01
     while True:
         # Greedly run actions without learn anymore
         action = agent.choose_action(current_state)
         next_state, reward, done, info = env.step(action)
-        print('Greedy action:', action, 'Reward State:', reward)
+        print('Greedy action:', action, 'Reward:', reward, 'next_state:', next_state)
 

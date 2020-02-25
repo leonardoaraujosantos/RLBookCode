@@ -114,6 +114,9 @@ class CrawlingRobotEnv:
         if self.invert_reward:
             reward *= -1
 
+        if reward < 0:
+            reward /= 2.
+
         # Return (next_state, reward, done, some_info)
         return self.state_2_index[self.state], reward, False, {}
 
