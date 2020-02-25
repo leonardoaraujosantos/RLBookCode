@@ -4,6 +4,7 @@ from pybricks import ev3brick as brick
 from pybricks.ev3devices import Motor, InfraredSensor
 from pybricks.parameters import Port, Stop, Button
 from pybricks.tools import print
+from pybricks.tools import wait
 import utils_motor
 
 
@@ -45,7 +46,7 @@ class CrawlingRobotEnv:
     This class will implement a similar environment interface as seen on openAI gym, but actually
     interface with a real world-robot (Lego)
     """
-    def __init__(self, invert_reward=False, step_angle=45):
+    def __init__(self, invert_reward=False, step_angle=35):
         self.n_leg_state = 3
         self.n_feet_state = 3
         self.action_space = self.n_leg_state + self.n_feet_state
@@ -115,19 +116,6 @@ class CrawlingRobotEnv:
 
         # Return (next_state, reward, done, some_info)
         return self.state_2_index[self.state], reward, False, {}
-
-    def __position_2_angle(self, position):
-        """
-        Decode a position enum (UP,NEUTRAL,DOWN) to motor angles
-        :param position: (UP,NEUTRAL,DOWN) values from MotorState enum
-        :return:
-        """
-        if position == MotorState.UP:
-            return self.motor_step_angle
-        elif position == MotorState.NEUTRAL:
-            return 0
-        elif position == MotorState.DOWN:
-            return -self.motor_step_angle
 
     def __control_motors(self, motor_action):
         """
