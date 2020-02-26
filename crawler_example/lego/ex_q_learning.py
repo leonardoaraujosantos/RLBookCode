@@ -41,3 +41,6 @@ if __name__ == '__main__':
         next_state, reward, done, info = env.step(action)
         print('action:', action, 'Reward:', reward, 'next_state:', next_state)
 
+print(env)
+for state_idx in range(9):
+    print('state_idx:', state_idx, '\t', env.state_idx_to_str(state_idx))

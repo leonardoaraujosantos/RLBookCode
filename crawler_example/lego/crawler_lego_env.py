@@ -30,6 +30,17 @@ class MotorState:
         else:
             return None
 
+    @staticmethod
+    def desc(val):
+        if val == MotorState.NEUTRAL:
+            return 'NEUTRAL'
+        elif val == MotorState.UP:
+            return 'UP'
+        elif val == MotorState.DOWN:
+            return 'DOWN'
+        else:
+            return 'INVALID STATE'
+
 
 class MotorType:
     """
@@ -182,11 +193,11 @@ class CrawlingRobotEnv:
         0,1,2 ...
         :return: Index for state given one of possible state-space tuples.
         """
-        arm_state_space, leg_state_space = self.n_leg_state, self.n_feet_state
+        leg_state_space, feet_state_space = self.n_leg_state, self.n_feet_state
         tuple_2_index = {}
         index = 0
-        for x in range(arm_state_space):
-            for y in range(leg_state_space):
+        for x in range(leg_state_space):
+            for y in range(feet_state_space):
                 tuple_2_index[(MotorState.val(x), MotorState.val(y))] = index
                 index += 1
         return tuple_2_index
@@ -198,3 +209,27 @@ class CrawlingRobotEnv:
         :return:
         """
         return 0
+
+    def __str__(self):
+        """
+        Return the current internal state description
+        :return:
+        """
+        arm_idx, feet_idx = self.state
+        arm_desc = MotorState.desc(arm_idx)
+        feet_desc = MotorState.desc(feet_idx)
+        description_state = 'ROBOT CURRENT STATE leg:' + arm_desc + ' feet:' + feet_desc
+        return description_state
+
+    def state_idx_to_str(self, state_idx):
+        """
+        Return the description of a state index
+        :param state_idx: State index
+        :return:
+        """
+        state = list(self.state_2_index.keys())[list(self.state_2_index.values()).index(state_idx)]
+        arm_idx, feet_idx = state
+        arm_desc = MotorState.desc(arm_idx)
+        feet_desc = MotorState.desc(feet_idx)
+        description_state = 'leg:' + arm_desc + ' feet:' + feet_desc
+        return description_state
