@@ -1,11 +1,17 @@
 #!/usr/bin/env pybricks-micropython
 
-from pybricks import ev3brick as brick
-from pybricks.ev3devices import Motor, InfraredSensor
-from pybricks.parameters import Port, Stop, Button
-from pybricks.tools import print
-from pybricks.tools import wait
-import utils_motor
+try:
+    from pybricks import ev3brick as brick
+    from pybricks.ev3devices import Motor, InfraredSensor
+    from pybricks.parameters import Port, Stop, Button
+    from pybricks.tools import print
+    from pybricks.tools import wait
+    import utils_motor
+    print('Running on Robot')
+    running_on_lego = True
+except ModuleNotFoundError:
+    print('Running on PC')
+    running_on_lego = False
 
 
 class MotorState:
@@ -46,18 +52,25 @@ class CrawlingRobotEnv:
     This class will implement a similar environment interface as seen on openAI gym, but actually
     interface with a real world-robot (Lego)
     """
-    def __init__(self, invert_reward=False, step_angle=35):
+    def __init__(self, invert_reward=False, step_angle=35, run_on_lego=True):
         self.n_leg_state = 3
         self.n_feet_state = 3
         self.action_space = self.n_leg_state + self.n_feet_state
         self.observation_space = self.n_leg_state * self.n_feet_state
         # Set Initial state
         self.state = (MotorState.NEUTRAL, MotorState.NEUTRAL)
-        # Initialize a motors
-        self.leg_motor = Motor(Port.C)
-        self.feet_motor = Motor(Port.A)
-        # Initialize sensor for getting distance
-        self.infrared = InfraredSensor(Port.S1)
+        self.running_on_lego = run_on_lego
+        if running_on_lego:
+            # Initialize a motors
+            self.leg_motor = Motor(Port.C)
+            self.feet_motor = Motor(Port.A)
+            # Initialize sensor for getting distance
+            self.infrared = InfraredSensor(Port.S1)
+        else:
+            self.leg_motor = None
+            self.feet_motor = None
+            self.infrared = None
+
         self.motor_step_angle = step_angle
         # Dictionary to convert action indexes to motor commands
         self.action_2_arm = {0: (MotorType.LEG, MotorState.NEUTRAL),
@@ -89,8 +102,11 @@ class CrawlingRobotEnv:
         if robot leg/feet are into neutral angles
         :return:
         """
-        self.leg_motor.reset_angle(0.0)
-        self.feet_motor.reset_angle(0.0)
+        if self.running_on_lego:
+            self.leg_motor.reset_angle(0.0)
+            self.feet_motor.reset_angle(0.0)
+
+        # Set Initial internal state
         self.state = (MotorState.NEUTRAL, MotorState.NEUTRAL)
         return self.state_2_index[self.state]
 
@@ -102,20 +118,26 @@ class CrawlingRobotEnv:
         :return: next_state, reward, False, other_info
         """
         motor_action = self.action_2_arm[action]
-        # Get distance before move
-        distance_before_move = self.infrared.distance()
+        if running_on_lego:
+            # Get distance before move
+            distance_before_move = self.infrared.distance()
+        else:
+            distance_before_move = 0
+
         # Send command to motors, and update state
         self.__control_motors(motor_action)
-        # Get distance travelled after motors did some job(reward)
-        distance_after_move = self.infrared.distance()
-        reward = distance_after_move - distance_before_move
+        if running_on_lego:
+            # Get distance travelled after motors did some job(reward)
+            distance_after_move = self.infrared.distance()
+            reward = distance_after_move - distance_before_move
+        else:
+            distance_after_move = 0
+            reward = self.__simulate_reward(action)
+
 
         # Invert the reward if needed
         if self.invert_reward:
             reward *= -1
-
-        if reward < 0:
-            reward /= 2.
 
         # Return (next_state, reward, done, some_info)
         return self.state_2_index[self.state], reward, False, {}
@@ -139,15 +161,17 @@ class CrawlingRobotEnv:
             if position != curr_leg_pos:
                 # Update state for motor 0
                 self.state[0] = position
-                angle = self.dict_angle[curr_leg_pos, position]
-                utils_motor.leg(angle, self.leg_motor, self.feet_motor)
+                if self.running_on_lego:
+                    angle = self.dict_angle[curr_leg_pos, position]
+                    utils_motor.leg(angle, self.leg_motor, self.feet_motor)
         elif motor == MotorType.FEET:
             # Only change motor for different positions
             if position != curr_feet_pos:
                 # Update state for motor 1
                 self.state[1] = position
-                angle = self.dict_angle[curr_feet_pos, position]
-                utils_motor.feet(angle, self.feet_motor)
+                if self.running_on_lego:
+                    angle = self.dict_angle[curr_feet_pos, position]
+                    utils_motor.feet(angle, self.feet_motor)
         # Convert back to tuple
         self.state = tuple(self.state)
         return self.state
@@ -166,3 +190,11 @@ class CrawlingRobotEnv:
                 tuple_2_index[(MotorState.val(x), MotorState.val(y))] = index
                 index += 1
         return tuple_2_index
+
+    def __simulate_reward(self, action):
+        """
+        Execute the reward function (we get this from experiment actions manually on the robot)
+        :param action:
+        :return:
+        """
+        return 0
