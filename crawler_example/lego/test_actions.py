@@ -31,8 +31,8 @@ agent = Q_Agent(env, gamma=0.9, alpha=0.2)
 # 4: FEET UP
 # 5: FEET DOWN
 print('Distance:', env.read_sensor())
-#list_actions = [2,5,1,2,5,1,2,5,1,2,5,1,2,5,1]
-
+# Backward
+#list_actions = [1,4,2,5,1,4,2,5,1,4,2,5,1,4,2,5]
 # Forward
 list_actions = [1, 5, 2, 4, 1, 5, 2, 4, 1, 5, 2, 4, 1, 5, 2, 4, 1, 5, 2, 4, 1, 5, 2, 4, 0, 3]
 

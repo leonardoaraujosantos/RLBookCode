@@ -109,7 +109,7 @@ class CrawlingRobotEnv:
             (MotorState.UP, MotorState.UP): 0,
             (MotorState.UP, MotorState.NEUTRAL): -self.motor_step_angle,
             (MotorState.UP, MotorState.DOWN): -2*self.motor_step_angle,
-            (MotorState.DOWN, MotorState.DOWN): self.motor_step_angle,
+            (MotorState.DOWN, MotorState.DOWN): 0,
             (MotorState.DOWN, MotorState.NEUTRAL): self.motor_step_angle,
             (MotorState.DOWN, MotorState.UP): 2*self.motor_step_angle,
         }
