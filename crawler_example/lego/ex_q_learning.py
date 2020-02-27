@@ -13,7 +13,10 @@ except ModuleNotFoundError:
 num_iterations_train = 300
 # Bigger values decay faster
 e_greedy_decay = 1. / num_iterations_train
+# Initial agent action probability (just try things at random)
 initial_e_greedy_prob = 1.0
+# Number of iterations before check statitics of reward
+num_steps_eval = num_iterations_train//10
 
 if __name__ == '__main__':
     # Initialize environemnt
@@ -23,6 +26,8 @@ if __name__ == '__main__':
     print(agent.q_val_table)
 
     # Train
+    sum_rewards = 0
+    sum_rewards_vec = []
     for steps in range(num_iterations_train):
         action = agent.choose_action(current_state)
         current_state_str = str(env)
@@ -35,13 +40,17 @@ if __name__ == '__main__':
         print('-' * 20)
         # Don't forget to update your state otherwise the robot will be stuck
         current_state = next_state
+        sum_rewards += reward
+        if steps % num_steps_eval == 0:
+            sum_rewards_vec.append(sum_rewards)
+            print('\t\t*******Sum of rewards in %d steps: %d' % (num_steps_eval, sum_rewards))
+            sum_rewards = 0
 
     # Evaluate
     print(agent.q_val_table)
     # Only act greedly ...
     agent.e_greedy_prob = 0
     sum_rewards = 0
-    num_steps_eval = 20
     for steps in range(num_steps_eval):
         # Greedly run actions without learn anymore
         current_state_str = str(env)
@@ -52,6 +61,7 @@ if __name__ == '__main__':
         print('steps:', steps, '\n\tcurrent_state:', current_state_str, '\n\tACTION:', action_str, '\n\tnext_state:',
               next_state_str, '\n\treward:', reward, '\nprob:', agent.e_greedy_prob)
         print('-' * 20)
+        # Accumulate rewards
         sum_rewards += reward
         # Don't forget to update your state otherwise the robot will be stuck
         current_state = next_state
