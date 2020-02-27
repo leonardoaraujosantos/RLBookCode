@@ -1,5 +1,4 @@
 import random
-from collections import defaultdict
 import numpy as np
 
 """
@@ -16,9 +15,6 @@ class Q_Agent():
         rows, cols = (num_states, num_actions)
 
         # Create the state-action table
-        # This way (defaultdict and lambda) a new function will be dynamically generated
-        # self.q_val_table = defaultdict(lambda: np.array([0. for _ in range(env.action_space.n)]))
-        # Pythonic way to have 2d array (list of lists)
         self.q_val_table = [[0.] * cols for _ in range(rows)]
 
         self.alpha = alpha
@@ -48,13 +44,13 @@ class Q_Agent():
         :param next_state: Next state returned from the environment
         :return: None
         """
-        new_max_q = np.max(self.q_val_table[next_state])
+        new_max_q = max(self.q_val_table[next_state])
         new_value = reward + self.gamma * new_max_q
 
         old_value = self.q_val_table[cur_state][action]
         self.q_val_table[cur_state][action] = old_value + self.alpha * (new_value - old_value)
 
-        # Decay epsion_greedy
+        # Decay epsilon_greedy
         self.e_greedy_prob = self.exp_decay(self.e_greedy_prob)
 
     def exp_decay(self, value):

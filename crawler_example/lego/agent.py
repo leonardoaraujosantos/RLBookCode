@@ -52,7 +52,7 @@ class Q_Agent():
         :param state: Current state
         :return: Random or greedy action
         """
-        if (random.randint(0,100) / 100.) < self.e_greedy_prob:
+        if (random.randint(0, 100) / 100.) < self.e_greedy_prob:
             # randomly select action from state
             action = random.randint(0, self.num_actions-1)
         else:
@@ -75,7 +75,7 @@ class Q_Agent():
         old_value = self.q_val_table[cur_state][action]
         self.q_val_table[cur_state][action] = old_value + self.alpha * (new_value - old_value)
 
-        # Decay epsion_greedy
+        # Decay epsilon_greedy
         self.e_greedy_prob = self.exp_decay(self.e_greedy_prob)
 
     def exp_decay(self, value):

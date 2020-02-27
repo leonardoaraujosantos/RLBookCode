@@ -57,6 +57,15 @@ class MotorType:
         else:
             return None
 
+    @staticmethod
+    def desc(val):
+        if val == MotorType.LEG:
+            return 'leg'
+        elif val == MotorType.FEET:
+            return 'feet'
+        else:
+            return 'INVALID STATE'
+
 
 class CrawlingRobotEnv:
     """
@@ -103,6 +112,7 @@ class CrawlingRobotEnv:
             (MotorState.DOWN, MotorState.NEUTRAL): self.motor_step_angle,
             (MotorState.DOWN, MotorState.UP): 2*self.motor_step_angle,
         }
+
         # Populate dictionary to convert state tuple to state indexes
         self.state_2_index = self.__get_tuple_2_index()
         self.invert_reward = invert_reward
@@ -136,19 +146,19 @@ class CrawlingRobotEnv:
             distance_before_move = 0
 
         # Send command to motors, and update state
-        self.__control_motors(motor_action)
+        state = self.state
+        _, no_state_change_reward = self.__control_motors(motor_action)
         if running_on_lego:
             # Get distance travelled after motors did some job(reward)
             distance_after_move = self.infrared.distance()
             reward = distance_after_move - distance_before_move
         else:
-            distance_after_move = 0
-            reward = self.__simulate_reward(action)
-
+            reward = self.mdp_immediate_reward(state, action)
 
         # Invert the reward if needed
         if self.invert_reward:
             reward *= -1
+        reward += no_state_change_reward
 
         # Return (next_state, reward, done, some_info)
         return self.state_2_index[self.state], reward, False, {}
@@ -161,6 +171,7 @@ class CrawlingRobotEnv:
         :param motor_action: Input tupple
         :return: Next state after the action
         """
+        very_bad_reward = 0
         motor, position = motor_action
         # Convert state to list, make changes and bring back to tuple
         self.state = list(self.state)
@@ -175,6 +186,8 @@ class CrawlingRobotEnv:
                 if self.running_on_lego:
                     angle = self.dict_angle[curr_leg_pos, position]
                     utils_motor.leg(angle, self.leg_motor, self.feet_motor)
+            else:
+                very_bad_reward = -20
         elif motor == MotorType.FEET:
             # Only change motor for different positions
             if position != curr_feet_pos:
@@ -183,9 +196,11 @@ class CrawlingRobotEnv:
                 if self.running_on_lego:
                     angle = self.dict_angle[curr_feet_pos, position]
                     utils_motor.feet(angle, self.feet_motor)
+            else:
+                very_bad_reward = -20
         # Convert back to tuple
         self.state = tuple(self.state)
-        return self.state
+        return self.state, very_bad_reward
 
     def __get_tuple_2_index(self):
         """
@@ -202,13 +217,45 @@ class CrawlingRobotEnv:
                 index += 1
         return tuple_2_index
 
-    def __simulate_reward(self, action):
+    @staticmethod
+    def mdp_immediate_reward(state, action):
         """
-        Execute the reward function (we get this from experiment actions manually on the robot)
+        Execute the immediate reward function (we get this from experiment actions manually on the robot)
         :param action:
+        :param state:
         :return:
+        Action table:
+        0: (MotorType.LEG, MotorState.NEUTRAL),
+        1: (MotorType.LEG, MotorState.UP),
+        2: (MotorType.LEG, MotorState.DOWN),
+        3: (MotorType.FEET, MotorState.NEUTRAL),
+        4: (MotorType.FEET, MotorState.UP),
+        5: (MotorType.FEET, MotorState.DOWN)
+
+        State tuple: (LEG, FEET)
         """
-        return 0
+        reward = 0
+        if state == (MotorState.NEUTRAL, MotorState.NEUTRAL):
+            if action == 5:
+                reward = -10
+            elif action == 2:
+                reward = -1
+        elif state == (MotorState.DOWN, MotorState.DOWN):
+            if action == 4:
+                reward = 10
+            elif action == 1:
+                reward = 5
+        elif state == (MotorState.DOWN, MotorState.UP):
+            if action == 5:
+                reward = -10
+        elif state == (MotorState.NEUTRAL, MotorState.DOWN):
+            if action == 5:
+                reward = -10
+        elif state == (MotorState.NEUTRAL, MotorState.UP):
+            if action == 5:
+                reward = -10
+
+        return reward
 
     def __str__(self):
         """
@@ -218,7 +265,7 @@ class CrawlingRobotEnv:
         arm_idx, feet_idx = self.state
         arm_desc = MotorState.desc(arm_idx)
         feet_desc = MotorState.desc(feet_idx)
-        description_state = 'ROBOT CURRENT STATE leg:' + arm_desc + ' feet:' + feet_desc
+        description_state = 'leg:' + arm_desc + ' feet:' + feet_desc
         return description_state
 
     def state_idx_to_str(self, state_idx):
@@ -233,3 +280,10 @@ class CrawlingRobotEnv:
         feet_desc = MotorState.desc(feet_idx)
         description_state = 'leg:' + arm_desc + ' feet:' + feet_desc
         return description_state
+
+    def action_idx_to_str(self, action_idx):
+        motor, motor_state = self.action_2_arm[action_idx]
+        motor_str = MotorType.desc(motor)
+        action_str = MotorState.desc(motor_state)
+        description_action = motor_str + ' ' + action_str + ' idx:' + str(action_idx)
+        return description_action
