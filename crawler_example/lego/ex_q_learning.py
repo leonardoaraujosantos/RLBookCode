@@ -12,7 +12,7 @@ except ModuleNotFoundError:
 # Number seem to converge in simulation
 num_iterations_train = 300
 # Bigger values decay faster
-e_greedy_decay = 1. / num_iterations_train
+e_greedy_decay = 1.0 / num_iterations_train
 # Initial agent action probability (just try things at random)
 initial_e_greedy_prob = 1.0
 # Number of iterations before check statitics of reward
@@ -20,7 +20,7 @@ num_steps_eval = num_iterations_train//10
 
 if __name__ == '__main__':
     # Initialize environment
-    env = CrawlingRobotEnv(invert_reward=False, run_on_lego=running_on_lego, step_angle=45)
+    env = CrawlingRobotEnv(invert_reward=True, run_on_lego=running_on_lego, step_angle=45)
     current_state = env.reset()
     agent = Q_Agent(env, gamma=0.9, alpha=0.2, e_greedy_prob=initial_e_greedy_prob, e_greedy_decay=e_greedy_decay)
     print(agent.q_val_table)
@@ -45,6 +45,7 @@ if __name__ == '__main__':
             sum_rewards_vec.append(sum_rewards)
             print('\t\t*******Sum of rewards in %d steps: %d' % (num_steps_eval, sum_rewards))
             sum_rewards = 0
+
 
     # Save Q-table to a file
     print('Q TABLE')

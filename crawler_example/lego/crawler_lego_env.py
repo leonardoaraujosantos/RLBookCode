@@ -115,7 +115,21 @@ class CrawlingRobotEnv:
         }
 
         # Dictionary that will retain samples of experience
-        self.sampled_reward_function = {}
+        self.sampled_reward_function = {((2, 2), 2): -20, ((2, 0), 5): 0, ((2, 0), 4): 0, ((2, 1), 2): -20,
+                                        ((2, 1), 4): -20, ((0, 2), 3): 0, ((1, 2), 4): 0, ((1, 2), 1): -20,
+                                        ((1, 2), 0): 0, ((0, 1), 2): 0, ((2, 0), 1): 0, ((0, 0), 0): -20,
+                                        ((0, 1), 0): -20, ((2, 0), 0): 0, ((0, 0), 3): -20, ((2, 0), 2): -20,
+                                        ((2, 0), 3): -20, ((2, 1), 1): 1, ((1, 1), 5): 0, ((1, 2), 3): 0,
+                                        ((1, 0), 4): 0, ((0, 1), 1): 0, ((1, 1), 0): 0, ((0, 2), 4): 0, ((0, 2), 1): 0,
+                                        ((1, 2), 5): -20, ((1, 0), 2): 1, ((2, 2), 0): 0, ((0, 0), 4): -3,
+                                        ((0, 1), 5): 0, ((0, 2), 5): -20, ((2, 2), 4): 0, ((2, 1), 5): -4,
+                                        ((0, 1), 4): -20, ((0, 0), 2): 0, ((2, 1), 0): 0, ((2, 2), 3): 0,
+                                        ((1, 2), 2): 1, ((2, 2), 5): -20, ((0, 2), 2): -5, ((1, 0), 3): -20,
+                                        ((1, 0), 5): 0, ((2, 1), 3): -1, ((1, 1), 3): 0, ((1, 0), 0): 0,
+                                        ((2, 2), 1): 1, ((0, 0), 1): 0, ((0, 2), 0): -20, ((1, 1), 1): -20,
+                                        ((0, 1), 3): -25, ((0, 0), 5): 0}
+
+
         self.sampled_mdp = {}
 
         # Populate dictionary to convert state tuple to state indexes
@@ -146,6 +160,7 @@ class CrawlingRobotEnv:
         motor_action = self.action_2_arm[action]
         if running_on_lego:
             # Get distance before move
+            wait(100)
             distance_before_move = self.infrared.distance()
         else:
             distance_before_move = 0
@@ -154,15 +169,20 @@ class CrawlingRobotEnv:
         state = self.state
         no_state_change_penalty = self.__control_motors(motor_action)
         if running_on_lego:
+            wait(300)
             # Get distance travelled after motors did some job(reward)
             distance_after_move = self.infrared.distance()
             reward = distance_after_move - distance_before_move
+
+            # Try to filter out noise
+            if abs(reward) < 2:
+                reward = 0
+
+            # Invert the reward if needed
+            if self.invert_reward:
+                reward *= -1
         else:
             reward = self.mdp_immediate_reward(state, action)
-
-        # Invert the reward if needed
-        if self.invert_reward:
-            reward *= -1
 
         # Penalty for doing command that doesn't change state
         reward += no_state_change_penalty
@@ -229,8 +249,7 @@ class CrawlingRobotEnv:
                 index += 1
         return tuple_2_index
 
-    @staticmethod
-    def mdp_immediate_reward(state, action):
+    def mdp_immediate_reward(self, state, action):
         """
         Execute the immediate reward function (we get this from experiment actions manually on the robot)
         :param action:
@@ -246,27 +265,11 @@ class CrawlingRobotEnv:
 
         State tuple: (LEG, FEET)
         """
-        reward = 0
-        if state == (MotorState.NEUTRAL, MotorState.NEUTRAL):
-            if action == 5:
-                reward = -10
-            elif action == 2:
-                reward = -1
-        elif state == (MotorState.DOWN, MotorState.DOWN):
-            if action == 4:
-                reward = 10
-            elif action == 1:
-                reward = 5
-        elif state == (MotorState.DOWN, MotorState.UP):
-            if action == 5:
-                reward = -10
-        elif state == (MotorState.NEUTRAL, MotorState.DOWN):
-            if action == 5:
-                reward = -10
-        elif state == (MotorState.NEUTRAL, MotorState.UP):
-            if action == 5:
-                reward = -10
-
+        try:
+            reward = self.sampled_reward_function[state, action]
+        except KeyError:
+            print('Experience:', state, 'not recorded')
+            reward = 0
         return reward
 
     def __str__(self):
@@ -309,7 +312,13 @@ class CrawlingRobotEnv:
         :param next_state: Next state after doing an "action" at state "state"
         :return: None
         """
-        self.sampled_reward_function[state, action] = reward
+        if (state, action) in self.sampled_reward_function:
+            old_reward = self.sampled_reward_function[state, action]
+            if old_reward != reward:
+                print('\t\t****Reward change for same state/action pair: (OLD)', old_reward, '(NEW)', reward)
+            self.sampled_reward_function[state, action] = reward
+        else:
+            self.sampled_reward_function[state, action] = reward
         self.sampled_mdp[state, action] = next_state
 
     def read_sensor(self):
