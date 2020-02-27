@@ -114,6 +114,10 @@ class CrawlingRobotEnv:
             (MotorState.DOWN, MotorState.UP): 2*self.motor_step_angle,
         }
 
+        # Dictionary that will retain samples of experience
+        self.sampled_reward_function = {}
+        self.sampled_mdp = {}
+
         # Populate dictionary to convert state tuple to state indexes
         self.state_2_index = self.__get_tuple_2_index()
         self.invert_reward = invert_reward
@@ -163,8 +167,13 @@ class CrawlingRobotEnv:
         # Penalty for doing command that doesn't change state
         reward += no_state_change_penalty
 
+        next_state = self.state_2_index[self.state]
+
+        # Save on dictionary the pair state, action, reward
+        self.record_mdp(state, action, reward, next_state)
+
         # Return (next_state, reward, done, some_info)
-        return self.state_2_index[self.state], reward, False, {}
+        return next_state, reward, False, {}
 
     def __control_motors(self, motor_action):
         """
@@ -290,3 +299,18 @@ class CrawlingRobotEnv:
         action_str = MotorState.desc(motor_state)
         description_action = motor_str + ' ' + action_str + ' idx:' + str(action_idx)
         return description_action
+
+    def record_mdp(self, state, action, reward, next_state):
+        """
+        Use the previous state/action pairs
+        :param state: Current state
+        :param action: action
+        :param reward: Immediate reward of doing an "action" at state "state"
+        :param next_state: Next state after doing an "action" at state "state"
+        :return: None
+        """
+        self.sampled_reward_function[state, action] = reward
+        self.sampled_mdp[state, action] = next_state
+
+    def read_sensor(self):
+        return self.infrared.distance()

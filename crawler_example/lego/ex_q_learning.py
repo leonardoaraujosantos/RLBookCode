@@ -47,11 +47,39 @@ if __name__ == '__main__':
             sum_rewards = 0
 
     # Save Q-table to a file
+    print('Q TABLE')
+    print('-' * 20)
+    print(agent.q_val_table)
+    print('-' * 20)
+
+    print('Sampled Reward')
+    print('-' * 20)
+    print(env.sampled_reward_function)
+    print('-' * 20)
+
+    print('Sampled MDP')
+    print('-' * 20)
+    print(env.sampled_mdp)
+    print('-' * 20)
     try:
         with open("./q_val_table.txt", 'w') as f:
             print(agent.q_val_table, file=f)
     except:
-        print('Failed to save to a file')
+        print('Failed to save to a Q-Value table to file')
+
+    # Save the sampled Reward function
+    try:
+        with open("./reward_dict.txt", 'w') as f:
+            print(env.sampled_reward_function, file=f)
+    except:
+        print('Failed to save to a Reward dictionary to file')
+
+    # Save the sampled MDP function
+    try:
+        with open("./mdp_dict.txt", 'w') as f:
+            print(env.sampled_mdp, file=f)
+    except:
+        print('Failed to save to a Reward dictionary to file')
 
     # Evaluate
     # Only act greedly ...

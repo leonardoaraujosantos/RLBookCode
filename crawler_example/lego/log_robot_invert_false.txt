@@ -1,0 +1,2331 @@
+Starting: brickrun --directory="/home/robot/play_motors_crawler" "/home/robot/play_motors_crawler/ex_q_learn.py"
+Started.
+----------
+Running on Robot
+[[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+steps: 0
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 2
+prob: 0.9966666666666667
+--------------------
+		*******Sum of rewards in 30 steps: 2
+steps: 1
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9933444444444445
+--------------------
+steps: 2
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.9900332962962963
+--------------------
+steps: 3
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.9867331853086421
+--------------------
+steps: 4
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 6
+prob: 0.9834440746909467
+--------------------
+steps: 5
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -7
+prob: 0.9801659277753101
+--------------------
+steps: 6
+	current_state: leg:DOWN feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 11
+prob: 0.9768987080160592
+--------------------
+steps: 7
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.973642378989339
+--------------------
+steps: 8
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -12
+prob: 0.970396904392708
+--------------------
+steps: 9
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9671622480447322
+--------------------
+steps: 10
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9639383738845833
+--------------------
+steps: 11
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9607252459716346
+--------------------
+steps: 12
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9575228284850626
+--------------------
+steps: 13
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.9543310857234458
+--------------------
+steps: 14
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.9511499821043676
+--------------------
+steps: 15
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.9479794821640198
+--------------------
+steps: 16
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.9448195505568064
+--------------------
+steps: 17
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.9416701520549504
+--------------------
+steps: 18
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -1
+prob: 0.9385312515481004
+--------------------
+steps: 19
+	current_state: leg:DOWN feet:UP
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:UP
+	reward: -20
+prob: 0.9354028140429401
+--------------------
+steps: 20
+	current_state: leg:DOWN feet:UP
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:UP
+	reward: -20
+prob: 0.9322848046627971
+--------------------
+steps: 21
+	current_state: leg:DOWN feet:UP
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -20
+prob: 0.9291771886472544
+--------------------
+steps: 22
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.9260799313517635
+--------------------
+steps: 23
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.9229929982472578
+--------------------
+steps: 24
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.9199163549197669
+--------------------
+steps: 25
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.9168499670700344
+--------------------
+steps: 26
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.9137938005131343
+--------------------
+steps: 27
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.9107478211780904
+--------------------
+steps: 28
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.907711995107497
+--------------------
+steps: 29
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.9046862884571386
+--------------------
+steps: 30
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.9016706674956149
+--------------------
+		*******Sum of rewards in 30 steps: -303
+steps: 31
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.8986650986039628
+--------------------
+steps: 32
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.895669548275283
+--------------------
+steps: 33
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.8926839831143655
+--------------------
+steps: 34
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.8897083698373176
+--------------------
+steps: 35
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.8867426752711932
+--------------------
+steps: 36
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.8837868663536225
+--------------------
+steps: 37
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.880840910132444
+--------------------
+steps: 38
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.8779047737653357
+--------------------
+steps: 39
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.8749784245194514
+--------------------
+steps: 40
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.8720618297710534
+--------------------
+steps: 41
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.8691549570051498
+--------------------
+steps: 42
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.8662577738151327
+--------------------
+steps: 43
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.8633702479024155
+--------------------
+steps: 44
+	current_state: leg:UP feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.8604923470760742
+--------------------
+steps: 45
+	current_state: leg:UP feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: -20
+prob: 0.8576240392524873
+--------------------
+steps: 46
+	current_state: leg:UP feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.8547652924549791
+--------------------
+steps: 47
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.8519160748134624
+--------------------
+steps: 48
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.8490763545640842
+--------------------
+steps: 49
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.8462461000488707
+--------------------
+steps: 50
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.8434252797153745
+--------------------
+steps: 51
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.8406138621163233
+--------------------
+steps: 52
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.837811815909269
+--------------------
+steps: 53
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.835019109856238
+--------------------
+steps: 54
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.832235712823384
+--------------------
+steps: 55
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 5
+prob: 0.8294615937806393
+--------------------
+steps: 56
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.8266967218013706
+--------------------
+steps: 57
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.8239410660620326
+--------------------
+steps: 58
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.8211945958418259
+--------------------
+steps: 59
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.8184572805223532
+--------------------
+steps: 60
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.8157290895872787
+--------------------
+		*******Sum of rewards in 30 steps: -177
+steps: 61
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.8130099926219877
+--------------------
+steps: 62
+	current_state: leg:UP feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.8102999593132477
+--------------------
+steps: 63
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.8075989594488703
+--------------------
+steps: 64
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.804906962917374
+--------------------
+steps: 65
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.8022239397076495
+--------------------
+steps: 66
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 4
+prob: 0.7995498599086241
+--------------------
+steps: 67
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -5
+prob: 0.7968846937089287
+--------------------
+steps: 68
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 1
+prob: 0.7942284113965656
+--------------------
+steps: 69
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.7915809833585771
+--------------------
+steps: 70
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.7889423800807151
+--------------------
+steps: 71
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.7863125721471128
+--------------------
+steps: 72
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.7836915302399557
+--------------------
+steps: 73
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.7810792251391559
+--------------------
+steps: 74
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.7784756277220255
+--------------------
+steps: 75
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.7758807089629522
+--------------------
+steps: 76
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.7732944399330757
+--------------------
+steps: 77
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.7707167917999654
+--------------------
+steps: 78
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -5
+prob: 0.7681477358272989
+--------------------
+steps: 79
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 5
+prob: 0.7655872433745412
+--------------------
+steps: 80
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.763035285896626
+--------------------
+steps: 81
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.7604918349436374
+--------------------
+steps: 82
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.757956862160492
+--------------------
+steps: 83
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.7554303392866237
+--------------------
+steps: 84
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.7529122381556683
+--------------------
+steps: 85
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.7504025306951495
+--------------------
+steps: 86
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.7479011889261658
+--------------------
+steps: 87
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.7454081849630786
+--------------------
+steps: 88
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.7429234910132017
+--------------------
+steps: 89
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.740447079376491
+--------------------
+steps: 90
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.7379789224452361
+--------------------
+		*******Sum of rewards in 30 steps: -137
+steps: 91
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.735518992703752
+--------------------
+steps: 92
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.7330672627280729
+--------------------
+steps: 93
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.730623705185646
+--------------------
+steps: 94
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.7281882928350272
+--------------------
+steps: 95
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.7257609985255771
+--------------------
+steps: 96
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.7233417951971584
+--------------------
+steps: 97
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.7209306558798346
+--------------------
+steps: 98
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.7185275536935686
+--------------------
+steps: 99
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.7161324618479234
+--------------------
+steps: 100
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.7137453536417636
+--------------------
+steps: 101
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.7113662024629578
+--------------------
+steps: 102
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -4
+prob: 0.7089949817880813
+--------------------
+steps: 103
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.7066316651821211
+--------------------
+steps: 104
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 4
+prob: 0.7042762262981807
+--------------------
+steps: 105
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.7019286388771867
+--------------------
+steps: 106
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.6995888767475961
+--------------------
+steps: 107
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.6972569138251041
+--------------------
+steps: 108
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.6949327241123538
+--------------------
+steps: 109
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.692616281698646
+--------------------
+steps: 110
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.6903075607596505
+--------------------
+steps: 111
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.6880065355571183
+--------------------
+steps: 112
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.6857131804385946
+--------------------
+steps: 113
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.6834274698371327
+--------------------
+steps: 114
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.6811493782710088
+--------------------
+steps: 115
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.6788788803434388
+--------------------
+steps: 116
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.6766159507422939
+--------------------
+steps: 117
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.6743605642398197
+--------------------
+steps: 118
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.6721126956923537
+--------------------
+steps: 119
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -1
+prob: 0.6698723200400458
+--------------------
+steps: 120
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.667639412306579
+--------------------
+		*******Sum of rewards in 30 steps: -177
+steps: 121
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 0
+prob: 0.6654139475988904
+--------------------
+steps: 122
+	current_state: leg:DOWN feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.6631959011068941
+--------------------
+steps: 123
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 6
+prob: 0.6609852481032044
+--------------------
+steps: 124
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.6587819639428605
+--------------------
+steps: 125
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.656586024063051
+--------------------
+steps: 126
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.6543974039828409
+--------------------
+steps: 127
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -6
+prob: 0.6522160793028981
+--------------------
+steps: 128
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.6500420257052218
+--------------------
+steps: 129
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 6
+prob: 0.647875218952871
+--------------------
+steps: 130
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -5
+prob: 0.6457156348896948
+--------------------
+steps: 131
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.6435632494400626
+--------------------
+steps: 132
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.6414180386085957
+--------------------
+steps: 133
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.6392799784799004
+--------------------
+steps: 134
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.6371490452183007
+--------------------
+steps: 135
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 4
+prob: 0.6350252150675731
+--------------------
+steps: 136
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.6329084643506811
+--------------------
+steps: 137
+	current_state: leg:UP feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.6307987694695122
+--------------------
+steps: 138
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: -2
+prob: 0.6286961069046138
+--------------------
+steps: 139
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.6266004532149319
+--------------------
+steps: 140
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 1
+prob: 0.6245117850375488
+--------------------
+steps: 141
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.6224300790874237
+--------------------
+steps: 142
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -1
+prob: 0.6203553121571322
+--------------------
+steps: 143
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 7
+prob: 0.6182874611166085
+--------------------
+steps: 144
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.6162265029128865
+--------------------
+steps: 145
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.6141724145698436
+--------------------
+steps: 146
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.6121251731879441
+--------------------
+steps: 147
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.6100847559439844
+--------------------
+steps: 148
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.6080511400908378
+--------------------
+steps: 149
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.6060243029572018
+--------------------
+steps: 150
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.6040042219473445
+--------------------
+		*******Sum of rewards in 30 steps: -112
+steps: 151
+	current_state: leg:UP feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.6019908745408533
+--------------------
+steps: 152
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5999842382923838
+--------------------
+steps: 153
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.5979842908314092
+--------------------
+steps: 154
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -7
+prob: 0.5959910098619713
+--------------------
+steps: 155
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.5940043731624314
+--------------------
+steps: 156
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 6
+prob: 0.5920243585852233
+--------------------
+steps: 157
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.5900509440566059
+--------------------
+steps: 158
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -4
+prob: 0.5880841075764172
+--------------------
+steps: 159
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.5861238272178291
+--------------------
+steps: 160
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.584170081127103
+--------------------
+steps: 161
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 1
+prob: 0.582222847523346
+--------------------
+steps: 162
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.5802821046982682
+--------------------
+steps: 163
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 5
+prob: 0.5783478310159405
+--------------------
+steps: 164
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.5764200049125541
+--------------------
+steps: 165
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.5744986048961788
+--------------------
+steps: 166
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -2
+prob: 0.572583609546525
+--------------------
+steps: 167
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5706749975147033
+--------------------
+steps: 168
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.5687727475229877
+--------------------
+steps: 169
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.5668768383645777
+--------------------
+steps: 170
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.5649872489033624
+--------------------
+steps: 171
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.5631039580736847
+--------------------
+steps: 172
+	current_state: leg:UP feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5612269448801057
+--------------------
+steps: 173
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.559356188397172
+--------------------
+steps: 174
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.5574916677691815
+--------------------
+steps: 175
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.5556333622099508
+--------------------
+steps: 176
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.5537812510025844
+--------------------
+steps: 177
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.5519353134992424
+--------------------
+steps: 178
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5500955291209117
+--------------------
+steps: 179
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.5482618773571753
+--------------------
+steps: 180
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.5464343377659847
+--------------------
+		*******Sum of rewards in 30 steps: -135
+steps: 181
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.5446128899734315
+--------------------
+steps: 182
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.54279751367352
+--------------------
+steps: 183
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.5409881886279416
+--------------------
+steps: 184
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.5391848946658485
+--------------------
+steps: 185
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.537387611683629
+--------------------
+steps: 186
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -1
+prob: 0.5355963196446836
+--------------------
+steps: 187
+	current_state: leg:UP feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.5338109985792014
+--------------------
+steps: 188
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5320316285839374
+--------------------
+steps: 189
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.5302581898219909
+--------------------
+steps: 190
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5284906625225842
+--------------------
+steps: 191
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5267290269808424
+--------------------
+steps: 192
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5249732635575729
+--------------------
+steps: 193
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5232233526790476
+--------------------
+steps: 194
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5214792748367842
+--------------------
+steps: 195
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5197410105873282
+--------------------
+steps: 196
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.5180085405520371
+--------------------
+steps: 197
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:UP
+	reward: 0
+prob: 0.5162818454168637
+--------------------
+steps: 198
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5145609059321409
+--------------------
+steps: 199
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5128457029123671
+--------------------
+steps: 200
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5111362172359925
+--------------------
+steps: 201
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.509432429845206
+--------------------
+steps: 202
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.5077343217457219
+--------------------
+steps: 203
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5060418740065696
+--------------------
+steps: 204
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5043550677598811
+--------------------
+steps: 205
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.5026738842006814
+--------------------
+steps: 206
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -3
+prob: 0.5009983045866793
+--------------------
+steps: 207
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.499328310238057
+--------------------
+steps: 208
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 0
+prob: 0.4976638825372635
+--------------------
+steps: 209
+	current_state: leg:DOWN feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 3
+prob: 0.496005002928806
+--------------------
+steps: 210
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4943516529190433
+--------------------
+		*******Sum of rewards in 30 steps: -77
+steps: 211
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4927038140759798
+--------------------
+steps: 212
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.49106146802906
+--------------------
+steps: 213
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4894245964689631
+--------------------
+steps: 214
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.4877931811473999
+--------------------
+steps: 215
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.4861672038769086
+--------------------
+steps: 216
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.4845466465306522
+--------------------
+steps: 217
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.4829314910422168
+--------------------
+steps: 218
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4813217194054094
+--------------------
+steps: 219
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4797173136740581
+--------------------
+steps: 220
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4781182559618112
+--------------------
+steps: 221
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4765245284419385
+--------------------
+steps: 222
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.4749361133471321
+--------------------
+steps: 223
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4733529929693083
+--------------------
+steps: 224
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4717751496594106
+--------------------
+steps: 225
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.4702025658272126
+--------------------
+steps: 226
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4686352239411219
+--------------------
+steps: 227
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4670731065279849
+--------------------
+steps: 228
+	current_state: leg:UP feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.4655161961728917
+--------------------
+steps: 229
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 1
+prob: 0.4639644755189821
+--------------------
+steps: 230
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -1
+prob: 0.4624179272672521
+--------------------
+steps: 231
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -2
+prob: 0.4608765341763613
+--------------------
+steps: 232
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -20
+prob: 0.4593402790624401
+--------------------
+steps: 233
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 1
+prob: 0.4578091447988986
+--------------------
+steps: 234
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.4562831143162357
+--------------------
+steps: 235
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.4547621706018482
+--------------------
+steps: 236
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4532462966998421
+--------------------
+steps: 237
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 2
+prob: 0.4517354757108426
+--------------------
+steps: 238
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4502296907918065
+--------------------
+steps: 239
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4487289251558338
+--------------------
+steps: 240
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 2
+prob: 0.447233162071981
+--------------------
+		*******Sum of rewards in 30 steps: -74
+steps: 241
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.4457423848650745
+--------------------
+steps: 242
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4442565769155243
+--------------------
+steps: 243
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.4427757216591392
+--------------------
+steps: 244
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.441299802586942
+--------------------
+steps: 245
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4398288032449856
+--------------------
+steps: 246
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.438362707234169
+--------------------
+steps: 247
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.4369014982100551
+--------------------
+steps: 248
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.4354451598826882
+--------------------
+steps: 249
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
+prob: 0.4339936760164126
+--------------------
+steps: 250
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.4325470304296912
+--------------------
+steps: 251
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.4311052069949256
+--------------------
+steps: 252
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.4296681896382759
+--------------------
+steps: 253
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 2
+prob: 0.4282359623394816
+--------------------
+steps: 254
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4268085091316834
+--------------------
+steps: 255
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.4253858141012445
+--------------------
+steps: 256
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 3
+prob: 0.4239678613875737
+--------------------
+steps: 257
+	current_state: leg:UP feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.4225546351829484
+--------------------
+steps: 258
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4211461197323386
+--------------------
+steps: 259
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.4197422993332308
+--------------------
+steps: 260
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 4
+prob: 0.4183431583354534
+--------------------
+steps: 261
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4169486811410018
+--------------------
+steps: 262
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4155588522038652
+--------------------
+steps: 263
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4141736560298523
+--------------------
+steps: 264
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4127930771764195
+--------------------
+steps: 265
+	current_state: leg:UP feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.4114171002524981
+--------------------
+steps: 266
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.4100457099183231
+--------------------
+steps: 267
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.408678890885262
+--------------------
+steps: 268
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -2
+prob: 0.4073166279156445
+--------------------
+steps: 269
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 3
+prob: 0.4059589058225924
+--------------------
+steps: 270
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.4046057094698504
+--------------------
+		*******Sum of rewards in 30 steps: -96
+steps: 271
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.4032570237716176
+--------------------
+steps: 272
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -1
+prob: 0.4019128336923789
+--------------------
+steps: 273
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.4005731242467377
+--------------------
+steps: 274
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0.3992378804992485
+--------------------
+steps: 275
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 4
+prob: 0.397907087564251
+--------------------
+steps: 276
+	current_state: leg:UP feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
+prob: 0.3965807306057036
+--------------------
+steps: 277
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.3952587948370179
+--------------------
+steps: 278
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.3939412655208945
+--------------------
+steps: 279
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.3926281279691582
+--------------------
+steps: 280
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 4
+prob: 0.3913193675425943
+--------------------
+steps: 281
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: -1
+prob: 0.3900149696507857
+--------------------
+steps: 282
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.3887149197519498
+--------------------
+steps: 283
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.3874192033527766
+--------------------
+steps: 284
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 3
+prob: 0.3861278060082674
+--------------------
+steps: 285
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.3848407133215732
+--------------------
+steps: 286
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 4
+prob: 0.3835579109438346
+--------------------
+steps: 287
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: -1
+prob: 0.3822793845740218
+--------------------
+steps: 288
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.3810051199587751
+--------------------
+steps: 289
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -2
+prob: 0.3797351028922459
+--------------------
+steps: 290
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
+prob: 0.3784693192159384
+--------------------
+steps: 291
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 4
+prob: 0.377207754818552
+--------------------
+steps: 292
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: -1
+prob: 0.3759503956358234
+--------------------
+steps: 293
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.3746972276503707
+--------------------
+steps: 294
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
+prob: 0.3734482368915362
+--------------------
+steps: 295
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 2
+prob: 0.3722034094352311
+--------------------
+steps: 296
+	current_state: leg:DOWN feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -5
+prob: 0.3709627314037803
+--------------------
+steps: 297
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0.3697261889657677
+--------------------
+steps: 298
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.3684937683358818
+--------------------
+steps: 299
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0.3672654557747622
+--------------------
+Failed to save to a Q-Value table to file
+Failed to save to a Reward dictionary to file
+Failed to save to a Reward dictionary to file
+steps: 0
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 1
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 2
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 3
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 1
+prob: 0
+--------------------
+steps: 4
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 5
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 6
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -1
+prob: 0
+--------------------
+steps: 7
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 2
+prob: 0
+--------------------
+steps: 8
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 9
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 1
+prob: 0
+--------------------
+steps: 10
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -1
+prob: 0
+--------------------
+steps: 11
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 12
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 1
+prob: 0
+--------------------
+steps: 13
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 14
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 15
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 16
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 17
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 1
+prob: 0
+--------------------
+steps: 18
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 19
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 20
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 1
+prob: 0
+--------------------
+steps: 21
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 22
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: -1
+prob: 0
+--------------------
+steps: 23
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 24
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 25
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 1
+prob: 0
+--------------------
+steps: 26
+	current_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 27
+	current_state: leg:DOWN feet:DOWN
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 28
+	current_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 29
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: -1
+prob: 0
+--------------------
+Sum of rewards in 30 steps: 4
+----------
+Completed successfully.
