@@ -72,7 +72,7 @@ class CrawlingRobotEnv:
     This class will implement a similar environment interface as seen on openAI gym, but actually
     interface with a real world-robot (Lego)
     """
-    def __init__(self, invert_reward=False, step_angle=35, run_on_lego=True):
+    def __init__(self, invert_reward=False, step_angle=35, run_on_lego=True, no_change_penalty=-20):
         self.n_leg_state = 3
         self.n_feet_state = 3
         self.action_space = self.n_leg_state + self.n_feet_state
@@ -80,6 +80,7 @@ class CrawlingRobotEnv:
         # Set Initial state
         self.state = (MotorState.NEUTRAL, MotorState.NEUTRAL)
         self.running_on_lego = run_on_lego
+        self.no_change_penalty = no_change_penalty
         if running_on_lego:
             # Initialize a motors
             self.leg_motor = Motor(Port.C)
@@ -147,7 +148,7 @@ class CrawlingRobotEnv:
 
         # Send command to motors, and update state
         state = self.state
-        _, no_state_change_reward = self.__control_motors(motor_action)
+        no_state_change_penalty = self.__control_motors(motor_action)
         if running_on_lego:
             # Get distance travelled after motors did some job(reward)
             distance_after_move = self.infrared.distance()
@@ -158,7 +159,9 @@ class CrawlingRobotEnv:
         # Invert the reward if needed
         if self.invert_reward:
             reward *= -1
-        reward += no_state_change_reward
+
+        # Penalty for doing command that doesn't change state
+        reward += no_state_change_penalty
 
         # Return (next_state, reward, done, some_info)
         return self.state_2_index[self.state], reward, False, {}
@@ -171,7 +174,7 @@ class CrawlingRobotEnv:
         :param motor_action: Input tupple
         :return: Next state after the action
         """
-        very_bad_reward = 0
+        no_change_penalty = 0
         motor, position = motor_action
         # Convert state to list, make changes and bring back to tuple
         self.state = list(self.state)
@@ -187,7 +190,7 @@ class CrawlingRobotEnv:
                     angle = self.dict_angle[curr_leg_pos, position]
                     utils_motor.leg(angle, self.leg_motor, self.feet_motor)
             else:
-                very_bad_reward = -20
+                no_change_penalty = self.no_change_penalty
         elif motor == MotorType.FEET:
             # Only change motor for different positions
             if position != curr_feet_pos:
@@ -197,10 +200,10 @@ class CrawlingRobotEnv:
                     angle = self.dict_angle[curr_feet_pos, position]
                     utils_motor.feet(angle, self.feet_motor)
             else:
-                very_bad_reward = -20
+                no_change_penalty = self.no_change_penalty
         # Convert back to tuple
         self.state = tuple(self.state)
-        return self.state, very_bad_reward
+        return no_change_penalty
 
     def __get_tuple_2_index(self):
         """

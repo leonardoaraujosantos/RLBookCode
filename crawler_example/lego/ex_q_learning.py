@@ -19,7 +19,7 @@ initial_e_greedy_prob = 1.0
 num_steps_eval = num_iterations_train//10
 
 if __name__ == '__main__':
-    # Initialize environemnt
+    # Initialize environment
     env = CrawlingRobotEnv(invert_reward=False, run_on_lego=running_on_lego, step_angle=45)
     current_state = env.reset()
     agent = Q_Agent(env, gamma=0.9, alpha=0.2, e_greedy_prob=initial_e_greedy_prob, e_greedy_decay=e_greedy_decay)
@@ -46,8 +46,14 @@ if __name__ == '__main__':
             print('\t\t*******Sum of rewards in %d steps: %d' % (num_steps_eval, sum_rewards))
             sum_rewards = 0
 
+    # Save Q-table to a file
+    try:
+        with open("./q_val_table.txt", 'w') as f:
+            print(agent.q_val_table, file=f)
+    except:
+        print('Failed to save to a file')
+
     # Evaluate
-    print(agent.q_val_table)
     # Only act greedly ...
     agent.e_greedy_prob = 0
     sum_rewards = 0
