@@ -1,0 +1,202 @@
+Starting: brickrun --directory="/home/robot/play_motors_crawler" "/home/robot/play_motors_crawler/test_env.py"
+Started.
+----------
+Running on Robot
+Should display on VisualStudio
+Distance: 66
+steps: 0
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0.5
+--------------------
+steps: 1
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+steps: 2
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 7
+prob: 0.5
+--------------------
+steps: 3
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -2
+prob: 0.5
+--------------------
+steps: 4
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 5
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 7 (NEW) 2
+steps: 6
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 2
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) -2 (NEW) 5
+steps: 7
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 5
+prob: 0.5
+--------------------
+steps: 8
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 9
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 2 (NEW) 0
+steps: 10
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 5 (NEW) 9
+steps: 11
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 9
+prob: 0.5
+--------------------
+steps: 12
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 13
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -6
+steps: 14
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -6
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 9 (NEW) 17
+steps: 15
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 17
+prob: 0.5
+--------------------
+steps: 16
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 17
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) -6 (NEW) -10
+steps: 18
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -10
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 17 (NEW) 22
+steps: 19
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 22
+prob: 0.5
+--------------------
+steps: 20
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 21
+	current_state: leg:UP feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:UP feet:DOWN
+	reward: 0
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) -10 (NEW) -13
+steps: 22
+	current_state: leg:UP feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -13
+prob: 0.5
+--------------------
+		****Reward change for same state/action pair: (OLD) 22 (NEW) 25
+steps: 23
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 25
+prob: 0.5
+--------------------
+steps: 24
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.5
+--------------------
+steps: 25
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.5
+--------------------
+Sum of rewards: 56
+Good
+----------
+Completed successfully.

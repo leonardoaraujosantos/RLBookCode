@@ -20,7 +20,7 @@ num_steps_eval = num_iterations_train//10
 
 if __name__ == '__main__':
     # Initialize environment
-    env = CrawlingRobotEnv(invert_reward=True, run_on_lego=running_on_lego, step_angle=45)
+    env = CrawlingRobotEnv(invert_reward=True, run_on_lego=running_on_lego, step_angle=40)
     current_state = env.reset()
     agent = Q_Agent(env, gamma=0.9, alpha=0.2, e_greedy_prob=initial_e_greedy_prob, e_greedy_decay=e_greedy_decay)
     print(agent.q_val_table)

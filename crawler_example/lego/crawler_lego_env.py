@@ -115,19 +115,7 @@ class CrawlingRobotEnv:
         }
 
         # Dictionary that will retain samples of experience
-        self.sampled_reward_function = {((2, 2), 2): -20, ((2, 0), 5): 0, ((2, 0), 4): 0, ((2, 1), 2): -20,
-                                        ((2, 1), 4): -20, ((0, 2), 3): 0, ((1, 2), 4): 0, ((1, 2), 1): -20,
-                                        ((1, 2), 0): 0, ((0, 1), 2): 0, ((2, 0), 1): 0, ((0, 0), 0): -20,
-                                        ((0, 1), 0): -20, ((2, 0), 0): 0, ((0, 0), 3): -20, ((2, 0), 2): -20,
-                                        ((2, 0), 3): -20, ((2, 1), 1): 1, ((1, 1), 5): 0, ((1, 2), 3): 0,
-                                        ((1, 0), 4): 0, ((0, 1), 1): 0, ((1, 1), 0): 0, ((0, 2), 4): 0, ((0, 2), 1): 0,
-                                        ((1, 2), 5): -20, ((1, 0), 2): 1, ((2, 2), 0): 0, ((0, 0), 4): -3,
-                                        ((0, 1), 5): 0, ((0, 2), 5): -20, ((2, 2), 4): 0, ((2, 1), 5): -4,
-                                        ((0, 1), 4): -20, ((0, 0), 2): 0, ((2, 1), 0): 0, ((2, 2), 3): 0,
-                                        ((1, 2), 2): 1, ((2, 2), 5): -20, ((0, 2), 2): -5, ((1, 0), 3): -20,
-                                        ((1, 0), 5): 0, ((2, 1), 3): -1, ((1, 1), 3): 0, ((1, 0), 0): 0,
-                                        ((2, 2), 1): 1, ((0, 0), 1): 0, ((0, 2), 0): -20, ((1, 1), 1): -20,
-                                        ((0, 1), 3): -25, ((0, 0), 5): 0}
+        self.sampled_reward_function = {}
 
 
         self.sampled_mdp = {}
@@ -175,7 +163,7 @@ class CrawlingRobotEnv:
             reward = distance_after_move - distance_before_move
 
             # Try to filter out noise
-            if abs(reward) < 2:
+            if abs(reward) < 3:
                 reward = 0
 
             # Invert the reward if needed
@@ -227,6 +215,10 @@ class CrawlingRobotEnv:
                 self.state[1] = position
                 if self.running_on_lego:
                     angle = self.dict_angle[curr_feet_pos, position]
+                    if position == MotorState.UP:
+                        angle += 5
+                    if position == MotorState.DOWN:
+                        angle -= 5
                     utils_motor.feet(angle, self.feet_motor)
             else:
                 no_change_penalty = self.no_change_penalty

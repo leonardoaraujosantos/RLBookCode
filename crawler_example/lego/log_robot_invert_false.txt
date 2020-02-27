@@ -25,36 +25,32 @@ steps: 2
 	reward: 0
 prob: 0.9900332962962963
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) 5
 steps: 3
 	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: 5
+	reward: 0
 prob: 0.9867331853086421
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) 12
 steps: 4
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 12
+	reward: -4
 prob: 0.9834440746909467
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -13
 steps: 5
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -13
+	reward: 9
 prob: 0.9801659277753101
 --------------------
-		****Reward change for same state/action pair: (OLD) -4 (NEW) 6
 steps: 6
 	current_state: leg:DOWN feet:UP
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 6
+	reward: -8
 prob: 0.9768987080160592
 --------------------
 steps: 7
@@ -64,12 +60,11 @@ steps: 7
 	reward: -20
 prob: 0.973642378989339
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -6
 steps: 8
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -6
+	reward: 5
 prob: 0.970396904392708
 --------------------
 steps: 9
@@ -114,7 +109,6 @@ steps: 14
 	reward: 0
 prob: 0.9511499821043676
 --------------------
-		****Reward change for same state/action pair: (OLD) -25 (NEW) 0
 steps: 15
 	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet NEUTRAL idx:3
@@ -129,20 +123,18 @@ steps: 16
 	reward: -20
 prob: 0.9448195505568064
 --------------------
-		****Reward change for same state/action pair: (OLD) 5 (NEW) 2
 steps: 17
 	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: 2
+	reward: 0
 prob: 0.9416701520549504
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -2
 steps: 18
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -2
+	reward: 0
 prob: 0.9385312515481004
 --------------------
 steps: 19
@@ -208,7 +200,6 @@ steps: 27
 	reward: -20
 prob: 0.9107478211780904
 --------------------
-		****Reward change for same state/action pair: (OLD) -3 (NEW) 0
 steps: 28
 	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet UP idx:4
@@ -230,7 +221,7 @@ steps: 30
 	reward: -20
 prob: 0.9016706674956149
 --------------------
-		*******Sum of rewards in 30 steps: -296
+		*******Sum of rewards in 30 steps: -298
 steps: 31
 	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet NEUTRAL idx:3
@@ -252,20 +243,18 @@ steps: 33
 	reward: 0
 prob: 0.8926839831143655
 --------------------
-		****Reward change for same state/action pair: (OLD) 1 (NEW) 2
 steps: 34
 	current_state: leg:UP feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: 2
+	reward: 0
 prob: 0.8897083698373176
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -2
 steps: 35
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: -2
+	reward: 0
 prob: 0.8867426752711932
 --------------------
 steps: 36
@@ -284,20 +273,20 @@ prob: 0.880840910132444
 --------------------
 steps: 38
 	current_state: leg:NEUTRAL feet:UP
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.8779047737653357
 --------------------
 steps: 39
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: -20
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.8749784245194514
 --------------------
 steps: 40
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet DOWN idx:5
 	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
@@ -347,30 +336,30 @@ prob: 0.8547652924549791
 --------------------
 steps: 47
 	current_state: leg:NEUTRAL feet:UP
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.8519160748134624
 --------------------
 steps: 48
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: feet DOWN idx:5
-	next_state: leg:NEUTRAL feet:DOWN
+	next_state: leg:UP feet:DOWN
 	reward: 0
 prob: 0.8490763545640842
 --------------------
 steps: 49
-	current_state: leg:NEUTRAL feet:DOWN
+	current_state: leg:UP feet:DOWN
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.8462461000488707
 --------------------
 steps: 50
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: 2
+	reward: 0
 prob: 0.8434252797153745
 --------------------
 steps: 51
@@ -387,52 +376,46 @@ steps: 52
 	reward: -20
 prob: 0.837811815909269
 --------------------
-		****Reward change for same state/action pair: (OLD) -2 (NEW) -3
 steps: 53
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: -3
+	reward: 0
 prob: 0.835019109856238
 --------------------
-		****Reward change for same state/action pair: (OLD) 2 (NEW) 0
 steps: 54
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.832235712823384
 --------------------
-		****Reward change for same state/action pair: (OLD) 12 (NEW) 10
 steps: 55
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	next_state: leg:UP feet:DOWN
+	reward: 0
 prob: 0.8294615937806393
 --------------------
-		****Reward change for same state/action pair: (OLD) 1 (NEW) -15
 steps: 56
-	current_state: leg:DOWN feet:DOWN
-	ACTION: leg UP idx:1
-	next_state: leg:UP feet:DOWN
-	reward: -15
+	current_state: leg:UP feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.8266967218013706
 --------------------
-		****Reward change for same state/action pair: (OLD) 1 (NEW) 15
 steps: 57
-	current_state: leg:UP feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 15
+	reward: 0
 prob: 0.8239410660620326
 --------------------
-		****Reward change for same state/action pair: (OLD) -15 (NEW) -14
 steps: 58
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg UP idx:1
 	next_state: leg:UP feet:DOWN
-	reward: -14
+	reward: 0
 prob: 0.8211945958418259
 --------------------
 steps: 59
@@ -449,7 +432,7 @@ steps: 60
 	reward: 0
 prob: 0.8157290895872787
 --------------------
-		*******Sum of rewards in 30 steps: -185
+		*******Sum of rewards in 30 steps: -160
 steps: 61
 	current_state: leg:UP feet:NEUTRAL
 	ACTION: feet UP idx:4
@@ -478,36 +461,32 @@ steps: 64
 	reward: 0
 prob: 0.804906962917374
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) 2
 steps: 65
 	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: 2
+	reward: 0
 prob: 0.8022239397076495
 --------------------
-		****Reward change for same state/action pair: (OLD) 10 (NEW) 12
 steps: 66
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 12
+	reward: -4
 prob: 0.7995498599086241
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -12
 steps: 67
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -12
+	reward: 3
 prob: 0.7968846937089287
 --------------------
-		****Reward change for same state/action pair: (OLD) -3 (NEW) -2
 steps: 68
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: -2
+	reward: 0
 prob: 0.7942284113965656
 --------------------
 steps: 69
@@ -547,24 +526,23 @@ prob: 0.7810792251391559
 --------------------
 steps: 74
 	current_state: leg:NEUTRAL feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
 	reward: 0
 prob: 0.7784756277220255
 --------------------
 steps: 75
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:DOWN feet:DOWN
 	ACTION: feet DOWN idx:5
-	next_state: leg:NEUTRAL feet:DOWN
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
 prob: 0.7758807089629522
 --------------------
-		****Reward change for same state/action pair: (OLD) -5 (NEW) 13
 steps: 76
-	current_state: leg:NEUTRAL feet:DOWN
+	current_state: leg:DOWN feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 13
+	reward: -20
 prob: 0.7732944399330757
 --------------------
 steps: 77
@@ -574,42 +552,41 @@ steps: 77
 	reward: -20
 prob: 0.7707167917999654
 --------------------
-		****Reward change for same state/action pair: (OLD) -12 (NEW) -10
+		****Reward change for same state/action pair: (OLD) 3 (NEW) 4
 steps: 78
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -10
+	reward: 4
 prob: 0.7681477358272989
 --------------------
-		****Reward change for same state/action pair: (OLD) 12 (NEW) 9
 steps: 79
 	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 9
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.7655872433745412
 --------------------
 steps: 80
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.763035285896626
 --------------------
-		****Reward change for same state/action pair: (OLD) -6 (NEW) -12
 steps: 81
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.7604918349436374
+--------------------
+		****Reward change for same state/action pair: (OLD) 5 (NEW) 0
+steps: 82
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -12
-prob: 0.7604918349436374
---------------------
-steps: 82
-	current_state: leg:NEUTRAL feet:DOWN
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:DOWN
-	reward: -20
+	reward: 0
 prob: 0.757956862160492
 --------------------
 steps: 83
@@ -623,46 +600,43 @@ steps: 84
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 13
+	reward: 0
 prob: 0.7529122381556683
 --------------------
 steps: 85
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -12
+	reward: 0
 prob: 0.7504025306951495
 --------------------
-		****Reward change for same state/action pair: (OLD) 13 (NEW) 12
 steps: 86
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 12
+	reward: 0
 prob: 0.7479011889261658
 --------------------
-		****Reward change for same state/action pair: (OLD) -14 (NEW) -13
 steps: 87
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg UP idx:1
 	next_state: leg:UP feet:DOWN
-	reward: -13
+	reward: 0
 prob: 0.7454081849630786
 --------------------
-		****Reward change for same state/action pair: (OLD) 15 (NEW) 13
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -4
 steps: 88
 	current_state: leg:UP feet:DOWN
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 13
-prob: 0.7429234910132017
---------------------
-		****Reward change for same state/action pair: (OLD) -12 (NEW) -13
-steps: 89
-	current_state: leg:DOWN feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -13
+	reward: -4
+prob: 0.7429234910132017
+--------------------
+steps: 89
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
 prob: 0.740447079376491
 --------------------
 steps: 90
@@ -672,7 +646,7 @@ steps: 90
 	reward: 0
 prob: 0.7379789224452361
 --------------------
-		*******Sum of rewards in 30 steps: -140
+		*******Sum of rewards in 30 steps: -161
 steps: 91
 	current_state: leg:UP feet:DOWN
 	ACTION: feet NEUTRAL idx:3
@@ -687,19 +661,19 @@ steps: 92
 	reward: 0
 prob: 0.7330672627280729
 --------------------
-		****Reward change for same state/action pair: (OLD) 13 (NEW) 12
 steps: 93
 	current_state: leg:UP feet:DOWN
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 12
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:DOWN
+	reward: -20
 prob: 0.730623705185646
 --------------------
+		****Reward change for same state/action pair: (OLD) -4 (NEW) 0
 steps: 94
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:UP feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -13
+	reward: 0
 prob: 0.7281882928350272
 --------------------
 steps: 95
@@ -723,71 +697,67 @@ steps: 97
 	reward: 0
 prob: 0.7209306558798346
 --------------------
-		****Reward change for same state/action pair: (OLD) 2 (NEW) 0
 steps: 98
 	current_state: leg:UP feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.7185275536935686
 --------------------
 steps: 99
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: -20
 prob: 0.7161324618479234
 --------------------
-		****Reward change for same state/action pair: (OLD) 9 (NEW) 11
 steps: 100
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 11
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.7137453536417636
 --------------------
 steps: 101
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: -20
 prob: 0.7113662024629578
 --------------------
-		****Reward change for same state/action pair: (OLD) -10 (NEW) -11
 steps: 102
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -11
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.7089949817880813
 --------------------
 steps: 103
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	reward: 0
 prob: 0.7066316651821211
 --------------------
 steps: 104
 	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 11
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.7042762262981807
 --------------------
 steps: 105
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.7019286388771867
 --------------------
-		****Reward change for same state/action pair: (OLD) -13 (NEW) -12
 steps: 106
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -12
+	reward: -20
 prob: 0.6995888767475961
 --------------------
 steps: 107
@@ -818,62 +788,57 @@ steps: 110
 	reward: -20
 prob: 0.6903075607596505
 --------------------
-		****Reward change for same state/action pair: (OLD) 12 (NEW) 14
 steps: 111
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 14
+	reward: 0
 prob: 0.6880065355571183
 --------------------
-		****Reward change for same state/action pair: (OLD) -13 (NEW) -10
+		****Reward change for same state/action pair: (OLD) 9 (NEW) 7
 steps: 112
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -10
+	reward: 7
 prob: 0.6857131804385946
 --------------------
-		****Reward change for same state/action pair: (OLD) 6 (NEW) 11
 steps: 113
 	current_state: leg:DOWN feet:UP
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 11
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.6834274698371327
 --------------------
-		****Reward change for same state/action pair: (OLD) -11 (NEW) -10
 steps: 114
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -10
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.6811493782710088
 --------------------
-		****Reward change for same state/action pair: (OLD) 11 (NEW) 9
 steps: 115
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 9
+	reward: 0
 prob: 0.6788788803434388
 --------------------
+		****Reward change for same state/action pair: (OLD) 7 (NEW) 8
 steps: 116
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -10
-prob: 0.6766159507422939
---------------------
-		****Reward change for same state/action pair: (OLD) -2 (NEW) 0
-steps: 117
-	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: 0
+	reward: 8
+prob: 0.6766159507422939
+--------------------
+steps: 117
+	current_state: leg:DOWN feet:UP
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -20
 prob: 0.6743605642398197
 --------------------
-		****Reward change for same state/action pair: (OLD) -1 (NEW) 0
 steps: 118
 	current_state: leg:DOWN feet:UP
 	ACTION: feet NEUTRAL idx:3
@@ -881,28 +846,26 @@ steps: 118
 	reward: 0
 prob: 0.6721126956923537
 --------------------
-		****Reward change for same state/action pair: (OLD) 9 (NEW) 8
 steps: 119
 	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.6698723200400458
 --------------------
 steps: 120
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
 prob: 0.667639412306579
 --------------------
-		*******Sum of rewards in 30 steps: -150
-		****Reward change for same state/action pair: (OLD) -10 (NEW) -9
+		*******Sum of rewards in 30 steps: -145
 steps: 121
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -9
+	reward: 0
 prob: 0.6654139475988904
 --------------------
 steps: 122
@@ -912,68 +875,66 @@ steps: 122
 	reward: 0
 prob: 0.6631959011068941
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 9
+		****Reward change for same state/action pair: (OLD) -4 (NEW) -3
 steps: 123
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 9
+	reward: -3
 prob: 0.6609852481032044
 --------------------
-		****Reward change for same state/action pair: (OLD) -10 (NEW) -9
+		****Reward change for same state/action pair: (OLD) 8 (NEW) 7
 steps: 124
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -9
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 7
 prob: 0.6587819639428605
 --------------------
-		****Reward change for same state/action pair: (OLD) -2 (NEW) 0
 steps: 125
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.656586024063051
 --------------------
-		****Reward change for same state/action pair: (OLD) 2 (NEW) 0
 steps: 126
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.6543974039828409
 --------------------
 steps: 127
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.6522160793028981
 --------------------
 steps: 128
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	reward: 0
 prob: 0.6500420257052218
 --------------------
-		****Reward change for same state/action pair: (OLD) 9 (NEW) 8
+		****Reward change for same state/action pair: (OLD) -3 (NEW) -4
 steps: 129
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	reward: -4
 prob: 0.647875218952871
 --------------------
+		****Reward change for same state/action pair: (OLD) 7 (NEW) 9
 steps: 130
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -9
+	reward: 9
 prob: 0.6457156348896948
 --------------------
-		****Reward change for same state/action pair: (OLD) 1 (NEW) 0
 steps: 131
 	current_state: leg:DOWN feet:UP
 	ACTION: leg UP idx:1
@@ -995,41 +956,40 @@ steps: 133
 	reward: -20
 prob: 0.6392799784799004
 --------------------
-		****Reward change for same state/action pair: (OLD) 12 (NEW) 10
 steps: 134
 	current_state: leg:UP feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	reward: 0
 prob: 0.6371490452183007
 --------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -7
+		****Reward change for same state/action pair: (OLD) 9 (NEW) 8
 steps: 135
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -7
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 8
 prob: 0.6350252150675731
 --------------------
 steps: 136
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.6329084643506811
 --------------------
 steps: 137
-	current_state: leg:UP feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:UP
 	reward: -20
 prob: 0.6307987694695122
 --------------------
 steps: 138
-	current_state: leg:UP feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:UP feet:NEUTRAL
-	reward: -20
+	reward: 0
 prob: 0.6286961069046138
 --------------------
 steps: 139
@@ -1055,60 +1015,59 @@ prob: 0.6224300790874237
 --------------------
 steps: 142
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.6203553121571322
 --------------------
 steps: 143
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	reward: 0
 prob: 0.6182874611166085
 --------------------
+		****Reward change for same state/action pair: (OLD) 8 (NEW) 11
 steps: 144
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -7
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 11
 prob: 0.6162265029128865
 --------------------
 steps: 145
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.6141724145698436
 --------------------
 steps: 146
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:UP
 	reward: -20
 prob: 0.6121251731879441
 --------------------
 steps: 147
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.6100847559439844
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 7
 steps: 148
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 7
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
 prob: 0.6080511400908378
 --------------------
-		****Reward change for same state/action pair: (OLD) -13 (NEW) -9
 steps: 149
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg UP idx:1
 	next_state: leg:UP feet:DOWN
-	reward: -9
+	reward: 0
 prob: 0.6060243029572018
 --------------------
 steps: 150
@@ -1118,7 +1077,7 @@ steps: 150
 	reward: -20
 prob: 0.6040042219473445
 --------------------
-		*******Sum of rewards in 30 steps: -148
+		*******Sum of rewards in 30 steps: -72
 steps: 151
 	current_state: leg:UP feet:DOWN
 	ACTION: leg UP idx:1
@@ -1130,22 +1089,21 @@ steps: 152
 	current_state: leg:UP feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	reward: 0
 prob: 0.5999842382923838
 --------------------
-		****Reward change for same state/action pair: (OLD) -7 (NEW) -9
 steps: 153
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -9
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 11
 prob: 0.5979842908314092
 --------------------
 steps: 154
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	reward: 0
 prob: 0.5959910098619713
 --------------------
 steps: 155
@@ -1157,69 +1115,67 @@ prob: 0.5940043731624314
 --------------------
 steps: 156
 	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 7
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5920243585852233
 --------------------
 steps: 157
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.5900509440566059
 --------------------
-		****Reward change for same state/action pair: (OLD) -12 (NEW) -10
 steps: 158
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -10
+	reward: -20
 prob: 0.5880841075764172
 --------------------
-		****Reward change for same state/action pair: (OLD) 14 (NEW) 10
 steps: 159
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	reward: 0
 prob: 0.5861238272178291
 --------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -8
+		****Reward change for same state/action pair: (OLD) 11 (NEW) 13
 steps: 160
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
 prob: 0.584170081127103
 --------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -33
 steps: 161
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	reward: -33
 prob: 0.582222847523346
 --------------------
 steps: 162
 	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 7
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5802821046982682
 --------------------
-		****Reward change for same state/action pair: (OLD) -8 (NEW) -7
 steps: 163
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -7
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.5783478310159405
 --------------------
 steps: 164
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 7
+	reward: 0
 prob: 0.5764200049125541
 --------------------
 steps: 165
@@ -1229,19 +1185,19 @@ steps: 165
 	reward: -20
 prob: 0.5744986048961788
 --------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -10
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -3
 steps: 166
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg UP idx:1
 	next_state: leg:UP feet:DOWN
-	reward: -10
+	reward: -3
 prob: 0.572583609546525
 --------------------
 steps: 167
 	current_state: leg:UP feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	reward: 0
 prob: 0.5706749975147033
 --------------------
 steps: 168
@@ -1251,58 +1207,54 @@ steps: 168
 	reward: -20
 prob: 0.5687727475229877
 --------------------
-		****Reward change for same state/action pair: (OLD) -7 (NEW) -8
+		****Reward change for same state/action pair: (OLD) 13 (NEW) 8
 steps: 169
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 8
 prob: 0.5668768383645777
 --------------------
-		****Reward change for same state/action pair: (OLD) 7 (NEW) 6
 steps: 170
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 6
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.5649872489033624
 --------------------
 steps: 171
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5631039580736847
+--------------------
+steps: 172
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.5612269448801057
+--------------------
+steps: 173
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.559356188397172
+--------------------
+steps: 174
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: 0
+prob: 0.5574916677691815
+--------------------
+steps: 175
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
 	reward: -20
-prob: 0.5631039580736847
---------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -7
-steps: 172
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet UP idx:4
-	next_state: leg:DOWN feet:UP
-	reward: -7
-prob: 0.5612269448801057
---------------------
-		****Reward change for same state/action pair: (OLD) 11 (NEW) 7
-steps: 173
-	current_state: leg:DOWN feet:UP
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 7
-prob: 0.559356188397172
---------------------
-		****Reward change for same state/action pair: (OLD) -8 (NEW) -7
-steps: 174
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -7
-prob: 0.5574916677691815
---------------------
-steps: 175
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 6
 prob: 0.5556333622099508
 --------------------
 steps: 176
@@ -1312,65 +1264,64 @@ steps: 176
 	reward: -20
 prob: 0.5537812510025844
 --------------------
-		****Reward change for same state/action pair: (OLD) -7 (NEW) -6
+		****Reward change for same state/action pair: (OLD) 8 (NEW) 12
 steps: 177
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -6
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 12
 prob: 0.5519353134992424
 --------------------
 steps: 178
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 6
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.5500955291209117
 --------------------
 steps: 179
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:DOWN feet:UP
+	reward: 0
 prob: 0.5482618773571753
 --------------------
-		****Reward change for same state/action pair: (OLD) -10 (NEW) -8
 steps: 180
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:DOWN feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:DOWN
-	reward: -8
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.5464343377659847
 --------------------
-		*******Sum of rewards in 30 steps: -204
-		****Reward change for same state/action pair: (OLD) 10 (NEW) 8
+		*******Sum of rewards in 30 steps: -132
 steps: 181
-	current_state: leg:NEUTRAL feet:DOWN
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	next_state: leg:DOWN feet:UP
+	reward: 0
 prob: 0.5446128899734315
 --------------------
+		****Reward change for same state/action pair: (OLD) -8 (NEW) -10
 steps: 182
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:DOWN feet:UP
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	reward: -10
 prob: 0.54279751367352
 --------------------
+		****Reward change for same state/action pair: (OLD) -3 (NEW) 0
 steps: 183
 	current_state: leg:DOWN feet:DOWN
 	ACTION: leg UP idx:1
 	next_state: leg:UP feet:DOWN
-	reward: -10
+	reward: 0
 prob: 0.5409881886279416
 --------------------
-		****Reward change for same state/action pair: (OLD) 10 (NEW) 9
 steps: 184
 	current_state: leg:UP feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 9
+	reward: 0
 prob: 0.5391848946658485
 --------------------
 steps: 185
@@ -1380,82 +1331,79 @@ steps: 185
 	reward: -20
 prob: 0.537387611683629
 --------------------
+		****Reward change for same state/action pair: (OLD) 12 (NEW) 10
 steps: 186
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -6
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 10
 prob: 0.5355963196446836
 --------------------
 steps: 187
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.5338109985792014
 --------------------
 steps: 188
-	current_state: leg:UP feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.5320316285839374
 --------------------
 steps: 189
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 6
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5302581898219909
 --------------------
-		****Reward change for same state/action pair: (OLD) -10 (NEW) -9
 steps: 190
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:DOWN
-	reward: -9
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
 prob: 0.5284906625225842
 --------------------
-		****Reward change for same state/action pair: (OLD) 9 (NEW) 8
 steps: 191
-	current_state: leg:UP feet:DOWN
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5267290269808424
 --------------------
 steps: 192
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:DOWN
-	reward: -9
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
 prob: 0.5249732635575729
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 9
 steps: 193
-	current_state: leg:UP feet:DOWN
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 9
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5232233526790476
 --------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -10
 steps: 194
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:DOWN
-	reward: -10
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
 prob: 0.5214792748367842
 --------------------
 steps: 195
-	current_state: leg:UP feet:DOWN
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:DOWN
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.5197410105873282
 --------------------
 steps: 196
-	current_state: leg:NEUTRAL feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet UP idx:4
 	next_state: leg:NEUTRAL feet:UP
 	reward: 0
@@ -1477,501 +1425,496 @@ prob: 0.5145609059321409
 --------------------
 steps: 199
 	current_state: leg:UP feet:UP
-	ACTION: feet DOWN idx:5
-	next_state: leg:UP feet:DOWN
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.5128457029123671
 --------------------
-		****Reward change for same state/action pair: (OLD) 9 (NEW) 11
 steps: 200
-	current_state: leg:UP feet:DOWN
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: 11
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5111362172359925
 --------------------
-		****Reward change for same state/action pair: (OLD) -8 (NEW) -11
 steps: 201
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:DOWN
-	reward: -11
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
 prob: 0.509432429845206
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 11
 steps: 202
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.5077343217457219
+--------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -3
+steps: 203
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 11
-prob: 0.5077343217457219
---------------------
-		****Reward change for same state/action pair: (OLD) -6 (NEW) -9
-steps: 203
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -9
+	reward: -3
 prob: 0.5060418740065696
 --------------------
-		****Reward change for same state/action pair: (OLD) 6 (NEW) 8
+		****Reward change for same state/action pair: (OLD) 10 (NEW) 13
 steps: 204
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
 prob: 0.5043550677598811
 --------------------
-		****Reward change for same state/action pair: (OLD) -9 (NEW) -8
 steps: 205
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.5026738842006814
 --------------------
 steps: 206
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.5009983045866793
 --------------------
 steps: 207
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: -20
 prob: 0.499328310238057
 --------------------
 steps: 208
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet UP idx:4
-	next_state: leg:DOWN feet:UP
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.4976638825372635
 --------------------
-		****Reward change for same state/action pair: (OLD) 7 (NEW) 10
 steps: 209
-	current_state: leg:DOWN feet:UP
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 10
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.496005002928806
 --------------------
 steps: 210
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
 prob: 0.4943516529190433
 --------------------
-		*******Sum of rewards in 30 steps: -80
+		*******Sum of rewards in 30 steps: -53
 steps: 211
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
 prob: 0.4927038140759798
 --------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -5
 steps: 212
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: -5
 prob: 0.49106146802906
 --------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -22
 steps: 213
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -22
 prob: 0.4894245964689631
 --------------------
 steps: 214
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.4877931811473999
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 7
 steps: 215
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 7
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.4861672038769086
 --------------------
 steps: 216
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
 prob: 0.4845466465306522
 --------------------
-		****Reward change for same state/action pair: (OLD) 7 (NEW) 8
+		****Reward change for same state/action pair: (OLD) 13 (NEW) 12
 steps: 217
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 12
 prob: 0.4829314910422168
 --------------------
+		****Reward change for same state/action pair: (OLD) -5 (NEW) 0
 steps: 218
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -8
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.4813217194054094
 --------------------
 steps: 219
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.4797173136740581
 --------------------
 steps: 220
-	current_state: leg:UP feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.4781182559618112
 --------------------
-		****Reward change for same state/action pair: (OLD) 8 (NEW) 6
 steps: 221
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 6
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.4765245284419385
 --------------------
 steps: 222
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:DOWN
-	reward: -20
+	next_state: leg:DOWN feet:NEUTRAL
+	reward: 0
 prob: 0.4749361133471321
 --------------------
-		****Reward change for same state/action pair: (OLD) -8 (NEW) -7
 steps: 223
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -7
-prob: 0.4733529929693083
---------------------
-steps: 224
 	current_state: leg:DOWN feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
+prob: 0.4733529929693083
+--------------------
+steps: 224
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
 prob: 0.4717751496594106
 --------------------
-		****Reward change for same state/action pair: (OLD) 0 (NEW) -2
 steps: 225
 	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
 	next_state: leg:NEUTRAL feet:DOWN
-	reward: -2
+	reward: 0
 prob: 0.4702025658272126
 --------------------
-		****Reward change for same state/action pair: (OLD) 11 (NEW) 8
+		****Reward change for same state/action pair: (OLD) -3 (NEW) -5
 steps: 226
 	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
 	next_state: leg:DOWN feet:DOWN
-	reward: 8
+	reward: -5
 prob: 0.4686352239411219
 --------------------
-		****Reward change for same state/action pair: (OLD) -7 (NEW) -6
+		****Reward change for same state/action pair: (OLD) 12 (NEW) -19
 steps: 227
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -6
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -19
 prob: 0.4670731065279849
 --------------------
-		****Reward change for same state/action pair: (OLD) 6 (NEW) 5
+		****Reward change for same state/action pair: (OLD) -10 (NEW) -7
 steps: 228
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 5
+	reward: -7
 prob: 0.4655161961728917
 --------------------
-		****Reward change for same state/action pair: (OLD) -6 (NEW) -5
+		****Reward change for same state/action pair: (OLD) -19 (NEW) 11
 steps: 229
 	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -5
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 11
 prob: 0.4639644755189821
 --------------------
 steps: 230
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 5
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
 prob: 0.4624179272672521
 --------------------
-		****Reward change for same state/action pair: (OLD) -5 (NEW) -6
 steps: 231
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:UP
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -6
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.4608765341763613
 --------------------
 steps: 232
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: -20
 prob: 0.4593402790624401
 --------------------
 steps: 233
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
 prob: 0.4578091447988986
 --------------------
-		****Reward change for same state/action pair: (OLD) -6 (NEW) -5
+		****Reward change for same state/action pair: (OLD) -5 (NEW) -4
 steps: 234
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -5
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
 prob: 0.4562831143162357
 --------------------
 steps: 235
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:DOWN
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4547621706018482
 --------------------
+		****Reward change for same state/action pair: (OLD) -4 (NEW) 0
 steps: 236
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	next_state: leg:DOWN feet:DOWN
 	reward: 0
 prob: 0.4532462966998421
 --------------------
+		****Reward change for same state/action pair: (OLD) 11 (NEW) 6
 steps: 237
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 5
-prob: 0.4517354757108426
---------------------
-		****Reward change for same state/action pair: (OLD) -5 (NEW) -4
-steps: 238
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -4
-prob: 0.4502296907918065
---------------------
-		****Reward change for same state/action pair: (OLD) 5 (NEW) 4
-steps: 239
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 4
-prob: 0.4487289251558338
---------------------
-steps: 240
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -4
-prob: 0.447233162071981
---------------------
-		*******Sum of rewards in 30 steps: -42
-steps: 241
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
-prob: 0.4457423848650745
---------------------
-steps: 242
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
-prob: 0.4442565769155243
---------------------
-		****Reward change for same state/action pair: (OLD) 4 (NEW) 3
-steps: 243
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 3
-prob: 0.4427757216591392
---------------------
-		****Reward change for same state/action pair: (OLD) -4 (NEW) -3
-steps: 244
-	current_state: leg:DOWN feet:DOWN
-	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -3
-prob: 0.441299802586942
---------------------
-		****Reward change for same state/action pair: (OLD) 3 (NEW) 2
-steps: 245
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
-	reward: 2
-prob: 0.4398288032449856
---------------------
-		****Reward change for same state/action pair: (OLD) -7 (NEW) -2
-steps: 246
 	current_state: leg:DOWN feet:DOWN
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: -2
-prob: 0.438362707234169
+	reward: 6
+prob: 0.4517354757108426
 --------------------
-		****Reward change for same state/action pair: (OLD) 10 (NEW) 3
-steps: 247
+steps: 238
 	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.4502296907918065
+--------------------
+steps: 239
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0.4487289251558338
+--------------------
+steps: 240
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0.447233162071981
+--------------------
+		*******Sum of rewards in 30 steps: -63
+steps: 241
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: -20
+prob: 0.4457423848650745
+--------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -4
+steps: 242
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0.4442565769155243
+--------------------
+steps: 243
+	current_state: leg:DOWN feet:DOWN
 	ACTION: feet DOWN idx:5
 	next_state: leg:DOWN feet:DOWN
-	reward: 3
+	reward: -20
+prob: 0.4427757216591392
+--------------------
+		****Reward change for same state/action pair: (OLD) 6 (NEW) 11
+steps: 244
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 11
+prob: 0.441299802586942
+--------------------
+steps: 245
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
+	reward: 0
+prob: 0.4398288032449856
+--------------------
+steps: 246
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet UP idx:4
+	next_state: leg:NEUTRAL feet:UP
+	reward: -20
+prob: 0.438362707234169
+--------------------
+steps: 247
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
 prob: 0.4369014982100551
 --------------------
-		****Reward change for same state/action pair: (OLD) -3 (NEW) 0
 steps: 248
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
 prob: 0.4354451598826882
 --------------------
 steps: 249
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	reward: -20
 prob: 0.4339936760164126
 --------------------
 steps: 250
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4325470304296912
 --------------------
+		****Reward change for same state/action pair: (OLD) -4 (NEW) -3
 steps: 251
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -3
 prob: 0.4311052069949256
 --------------------
 steps: 252
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:DOWN feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -20
 prob: 0.4296681896382759
 --------------------
+		****Reward change for same state/action pair: (OLD) 11 (NEW) 10
 steps: 253
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 10
 prob: 0.4282359623394816
 --------------------
 steps: 254
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.4268085091316834
 --------------------
 steps: 255
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
 	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.4253858141012445
 --------------------
 steps: 256
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4239678613875737
 --------------------
 steps: 257
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:DOWN
 	reward: 0
 prob: 0.4225546351829484
 --------------------
 steps: 258
-	current_state: leg:UP feet:NEUTRAL
+	current_state: leg:UP feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	next_state: leg:DOWN feet:DOWN
 	reward: 0
 prob: 0.4211461197323386
 --------------------
+		****Reward change for same state/action pair: (OLD) 10 (NEW) 12
 steps: 259
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 12
 prob: 0.4197422993332308
 --------------------
 steps: 260
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.4183431583354534
 --------------------
 steps: 261
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
 	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.4169486811410018
 --------------------
 steps: 262
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4155588522038652
 --------------------
+		****Reward change for same state/action pair: (OLD) -3 (NEW) -4
 steps: 263
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
 prob: 0.4141736560298523
 --------------------
+		****Reward change for same state/action pair: (OLD) 12 (NEW) 14
 steps: 264
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 14
 prob: 0.4127930771764195
 --------------------
 steps: 265
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: feet UP idx:4
 	next_state: leg:DOWN feet:UP
-	reward: 0
+	reward: -20
 prob: 0.4114171002524981
 --------------------
+		****Reward change for same state/action pair: (OLD) -33 (NEW) 0
 steps: 266
 	current_state: leg:DOWN feet:UP
 	ACTION: feet NEUTRAL idx:3
@@ -1988,182 +1931,191 @@ prob: 0.408678890885262
 --------------------
 steps: 268
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4073166279156445
 --------------------
+		****Reward change for same state/action pair: (OLD) -4 (NEW) 0
 steps: 269
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
 	reward: 0
 prob: 0.4059589058225924
 --------------------
+		****Reward change for same state/action pair: (OLD) 14 (NEW) -27
 steps: 270
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: -27
 prob: 0.4046057094698504
 --------------------
-		*******Sum of rewards in 30 steps: 3
+		*******Sum of rewards in 30 steps: -131
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -6
 steps: 271
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	next_state: leg:NEUTRAL feet:UP
+	reward: -6
 prob: 0.4032570237716176
 --------------------
 steps: 272
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.4019128336923789
 --------------------
 steps: 273
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.4005731242467377
 --------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -5
 steps: 274
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -5
 prob: 0.3992378804992485
 --------------------
+		****Reward change for same state/action pair: (OLD) -27 (NEW) 8
 steps: 275
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 8
 prob: 0.397907087564251
 --------------------
 steps: 276
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
 	ACTION: leg UP idx:1
-	next_state: leg:UP feet:NEUTRAL
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.3965807306057036
 --------------------
 steps: 277
-	current_state: leg:UP feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: feet NEUTRAL idx:3
 	next_state: leg:UP feet:NEUTRAL
-	reward: -20
+	reward: 0
 prob: 0.3952587948370179
 --------------------
 steps: 278
 	current_state: leg:UP feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.3939412655208945
 --------------------
 steps: 279
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.3926281279691582
 --------------------
+		****Reward change for same state/action pair: (OLD) -5 (NEW) -4
 steps: 280
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
 prob: 0.3913193675425943
 --------------------
+		****Reward change for same state/action pair: (OLD) 8 (NEW) 11
 steps: 281
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 11
 prob: 0.3900149696507857
 --------------------
 steps: 282
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.3887149197519498
 --------------------
 steps: 283
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.3874192033527766
 --------------------
 steps: 284
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	next_state: leg:UP feet:NEUTRAL
 	reward: -20
 prob: 0.3861278060082674
 --------------------
 steps: 285
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.3848407133215732
 --------------------
 steps: 286
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.3835579109438346
 --------------------
+		****Reward change for same state/action pair: (OLD) -4 (NEW) -6
 steps: 287
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -6
 prob: 0.3822793845740218
 --------------------
+		****Reward change for same state/action pair: (OLD) 11 (NEW) 13
 steps: 288
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
 prob: 0.3810051199587751
 --------------------
 steps: 289
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.3797351028922459
 --------------------
 steps: 290
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:UP
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: -20
+	next_state: leg:DOWN feet:UP
+	reward: 0
 prob: 0.3784693192159384
 --------------------
 steps: 291
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0.377207754818552
 --------------------
 steps: 292
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0.3759503956358234
 --------------------
 steps: 293
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
@@ -2171,146 +2123,279 @@ prob: 0.3746972276503707
 --------------------
 steps: 294
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.3734482368915362
 --------------------
 steps: 295
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: feet UP idx:4
-	next_state: leg:DOWN feet:UP
+	next_state: leg:NEUTRAL feet:UP
 	reward: 0
 prob: 0.3722034094352311
 --------------------
-		****Reward change for same state/action pair: (OLD) 3 (NEW) 0
 steps: 296
-	current_state: leg:DOWN feet:UP
-	ACTION: feet DOWN idx:5
-	next_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0.3709627314037803
 --------------------
 steps: 297
-	current_state: leg:DOWN feet:DOWN
+	current_state: leg:NEUTRAL feet:NEUTRAL
 	ACTION: feet NEUTRAL idx:3
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: -20
 prob: 0.3697261889657677
 --------------------
 steps: 298
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0.3684937683358818
 --------------------
+		****Reward change for same state/action pair: (OLD) -6 (NEW) -4
 steps: 299
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
 prob: 0.3672654557747622
 --------------------
 Q TABLE
 --------------------
-[[-12.10358810231162, 0.4562941642096451, 1.973399271983281, -6.55710392867085, 0.5337037486080001, 1.015508455053052], [-9.471332485120001, 0.0, 0.545984823375437, 1.751132052714411, -6.967599206400001, 0.98191208448], [-10.45168791552, 1.69287745536, 6.594065368463496, 0.7424755200000001, 0.5401473002917941, -15.219221979136], [0.6166457704744111, -3.68537728, 2.450600665607317, -6.492007659790356, 0.02620947456000001, 0.8311067136000002], [0.2858499072, -4.0, 0.0, 0.0, 0.0, 1.99465084585761], [1.192150726978047, -2.917771011697551, 6.963673433386124, 0.3654144000000001, 0.0, -9.55777734411355], [1.993329111259425, 1.140075814813772, -10.68692800893615, -13.16300076727271, 1.596624668646887, 1.991475701884154], [0.03240000000000001, 0.2262009618432001, -6.811199999999999, 2.20783259227025, -3.784, 2.446082866139969], [-4.760306693636521, -4.246634197441661, -16.56491843196847, -0.5725658761194904, -3.544337802120612, -19.25215375714051]]
+[[-13.58984620840813, 0.2187536492376747, 0.0963667182103613, -13.11274392636312, 0.6787333128779888, 2.953700736414834], [-11.7068865942528, 0.0269698545074915, 0.3267419239160485, 2.598730462640862, -9.523228199268605, -1.494831953993251], [-14.26528710733199, 0.9117472314216489, 2.080126795991999, 0.4473703673047298, 0.6600991679602686, -17.41762065068228], [2.21749490990893, 0.0, 0.0, -3.712551492626162, 0.0, 0.0], [0.0, -7.2, 0.036711261503015, 0.8483575436503623, 0.0, 0.0], [-0.2871126783999999, -7.024250699074725, 4.877072568769774, 0.0, 0.0, -11.63225069907473], [1.253523642818695, 0.0, -7.175987067525121, -4.0, 0.006351971788800003, -0.6241312772028415], [-0.01896386718846244, 0.2743854049288826, -7.2, -5.086298502026589, -9.582460613680484, -1.492714020178519], [1.614901162638076, 0.394841019154007, -9.423567353490917, 1.28, 6.895296534571973, -10.26855750043806]]
 --------------------
 Sampled Reward
 --------------------
-{((1, 1), 1): -20, ((0, 1), 3): 0, ((0, 0), 5): -2, ((0, 1), 0): -20, ((2, 0), 0): 0, ((1, 2), 0): 0, ((1, 2), 1): -20, ((2, 1), 2): -20, ((2, 2), 2): -20, ((2, 0), 5): 2, ((2, 0), 4): 0, ((2, 1), 4): -20, ((0, 2), 3): 0, ((1, 2), 4): 0, ((0, 1), 2): 0, ((2, 0), 1): 0, ((0, 0), 3): -20, ((2, 0), 2): -20, ((2, 0), 3): -20, ((2, 1), 1): 0, ((1, 1), 5): 0, ((1, 2), 3): 0, ((1, 0), 4): 0, ((0, 1), 1): 0, ((1, 1), 0): 0, ((0, 2), 4): 0, ((0, 2), 1): 0, ((1, 2), 5): -20, ((1, 0), 2): 0, ((2, 2), 0): -11, ((0, 0), 4): 0, ((0, 1), 5): 0, ((0, 2), 5): -20, ((2, 2), 4): -2, ((2, 1), 5): 0, ((0, 1), 4): -20, ((0, 0), 2): 0, ((2, 1), 0): 0, ((2, 2), 3): 0, ((1, 2), 2): 11, ((1, 0), 1): -20, ((0, 0), 0): -20, ((1, 0), 0): 0, ((0, 0), 1): 0, ((0, 2), 0): -20, ((0, 2), 2): 8, ((1, 0), 3): -20, ((1, 0), 5): 0, ((2, 1), 3): 0, ((1, 1), 3): 0, ((2, 2), 5): -20, ((2, 2), 1): -10}
+{((2, 1), 5): -7, ((0, 2), 5): -20, ((1, 2), 5): -20, ((0, 0), 2): 0, ((0, 1), 4): -20, ((2, 1), 0): -6, ((0, 2), 0): -20, ((0, 0), 5): 0, ((2, 2), 2): -20, ((0, 2), 3): 0, ((2, 0), 4): 0, ((2, 1), 2): -20, ((2, 1), 4): -20, ((0, 1), 3): 0, ((1, 2), 4): 0, ((1, 1), 1): -20, ((1, 1), 5): 0, ((1, 2), 3): 0, ((2, 0), 2): -20, ((2, 0), 3): -20, ((1, 0), 5): 0, ((1, 2), 0): 0, ((0, 0), 1): 0, ((2, 0), 0): 0, ((0, 0), 3): -20, ((2, 2), 0): 0, ((0, 0), 4): 0, ((0, 2), 4): 0, ((0, 2), 2): -4, ((2, 2), 1): 0, ((1, 0), 4): 0, ((2, 2), 3): 4, ((2, 2), 5): -20, ((1, 1), 3): 0, ((0, 1), 2): 0, ((1, 0), 3): -20, ((1, 1), 2): 0, ((0, 0), 0): -20, ((1, 0), 0): 0, ((0, 1), 0): -20, ((0, 1), 1): 0, ((1, 2), 1): -20, ((2, 1), 1): 0, ((2, 1), 3): 0, ((1, 2), 2): 0, ((1, 1), 0): 0, ((0, 2), 1): 0, ((1, 0), 2): 0, ((0, 1), 5): -22, ((2, 0), 5): -4, ((2, 2), 4): 13}
 --------------------
 Sampled MDP
 --------------------
-{((2, 2), 1): 5, ((1, 2), 2): 8, ((1, 2), 3): 3, ((1, 0), 4): 4, ((2, 2), 3): 6, ((0, 0), 3): 0, ((0, 1), 4): 1, ((0, 2), 1): 5, ((1, 2), 4): 4, ((1, 2), 5): 5, ((1, 1), 1): 4, ((0, 0), 2): 6, ((2, 1), 0): 1, ((0, 1), 3): 0, ((0, 2), 2): 8, ((2, 2), 5): 8, ((1, 0), 5): 5, ((2, 1), 3): 6, ((2, 1), 1): 4, ((1, 1), 5): 5, ((2, 0), 1): 3, ((1, 0), 1): 3, ((1, 0), 3): 3, ((1, 0), 0): 0, ((0, 1), 0): 1, ((0, 2), 0): 2, ((1, 1), 0): 1, ((2, 2), 0): 2, ((0, 0), 5): 2, ((0, 2), 4): 1, ((0, 2), 5): 2, ((2, 2), 4): 7, ((2, 1), 5): 8, ((0, 2), 3): 0, ((2, 2), 2): 8, ((2, 0), 5): 8, ((1, 2), 1): 5, ((1, 2), 0): 2, ((0, 1), 2): 7, ((0, 0), 0): 0, ((0, 0), 1): 3, ((2, 0), 0): 0, ((1, 0), 2): 6, ((0, 0), 4): 1, ((2, 1), 2): 7, ((2, 0), 4): 7, ((2, 1), 4): 7, ((0, 1), 5): 2, ((2, 0), 2): 6, ((2, 0), 3): 6}
+{((2, 1), 5): 8, ((0, 2), 5): 2, ((1, 2), 5): 5, ((0, 0), 2): 6, ((0, 1), 4): 1, ((2, 1), 0): 1, ((0, 2), 0): 2, ((0, 0), 5): 2, ((2, 2), 2): 8, ((0, 2), 3): 0, ((2, 0), 4): 7, ((2, 1), 2): 7, ((2, 1), 4): 7, ((0, 1), 3): 0, ((1, 2), 4): 4, ((1, 1), 1): 4, ((1, 1), 5): 5, ((1, 2), 3): 3, ((2, 0), 2): 6, ((2, 0), 3): 6, ((1, 0), 5): 5, ((1, 2), 0): 2, ((0, 0), 1): 3, ((2, 0), 0): 0, ((0, 0), 3): 0, ((2, 2), 0): 2, ((0, 0), 4): 1, ((0, 2), 4): 1, ((0, 2), 2): 8, ((2, 2), 1): 5, ((1, 0), 4): 4, ((2, 2), 3): 6, ((2, 2), 5): 8, ((1, 1), 3): 3, ((0, 1), 2): 7, ((1, 0), 3): 3, ((1, 1), 2): 7, ((0, 0), 0): 0, ((1, 0), 0): 0, ((0, 1), 0): 1, ((0, 1), 1): 4, ((1, 2), 1): 5, ((2, 1), 1): 4, ((2, 1), 3): 6, ((1, 2), 2): 8, ((1, 1), 0): 1, ((0, 2), 1): 5, ((1, 0), 2): 6, ((0, 1), 5): 2, ((2, 0), 5): 8, ((2, 2), 4): 7}
 --------------------
 Failed to save to a Q-Value table to file
 Failed to save to a Reward dictionary to file
 Failed to save to a Reward dictionary to file
 steps: 0
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
 prob: 0
 --------------------
 steps: 1
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0
 --------------------
 steps: 2
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0
 --------------------
 steps: 3
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0
 --------------------
 steps: 4
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0
 --------------------
 steps: 5
-	current_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:NEUTRAL feet:DOWN
 	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
 prob: 0
 --------------------
+		****Reward change for same state/action pair: (OLD) 13 (NEW) 14
 steps: 6
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
-	reward: 0
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 14
 prob: 0
 --------------------
 steps: 7
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
 	reward: 0
 prob: 0
 --------------------
 steps: 8
-	current_state: leg:DOWN feet:NEUTRAL
-	ACTION: leg NEUTRAL idx:0
-	next_state: leg:NEUTRAL feet:NEUTRAL
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
 	reward: 0
 prob: 0
 --------------------
 steps: 9
-	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
-	reward: 0
-prob: 0
---------------------
-steps: 10
-	current_state: leg:DOWN feet:NEUTRAL
+	current_state: leg:UP feet:NEUTRAL
 	ACTION: leg NEUTRAL idx:0
 	next_state: leg:NEUTRAL feet:NEUTRAL
 	reward: 0
 prob: 0
 --------------------
-steps: 11
+steps: 10
 	current_state: leg:NEUTRAL feet:NEUTRAL
-	ACTION: leg DOWN idx:2
-	next_state: leg:DOWN feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
 	reward: 0
 prob: 0
 --------------------
-Remote process ended due to signal: Killed
+steps: 11
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) 14 (NEW) 13
+steps: 12
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 13
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -25
+steps: 13
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: -25
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) 0 (NEW) -6
+steps: 14
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: -6
+prob: 0
+--------------------
+steps: 15
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 16
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 17
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) 13 (NEW) 10
+steps: 18
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 10
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) -25 (NEW) 0
+steps: 19
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0
+--------------------
+		****Reward change for same state/action pair: (OLD) -6 (NEW) 0
+steps: 20
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 21
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 22
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 23
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0
+--------------------
+steps: 24
+	current_state: leg:DOWN feet:DOWN
+	ACTION: feet UP idx:4
+	next_state: leg:DOWN feet:UP
+	reward: 10
+prob: 0
+--------------------
+steps: 25
+	current_state: leg:DOWN feet:UP
+	ACTION: leg UP idx:1
+	next_state: leg:UP feet:UP
+	reward: 0
+prob: 0
+--------------------
+steps: 26
+	current_state: leg:UP feet:UP
+	ACTION: feet NEUTRAL idx:3
+	next_state: leg:UP feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 27
+	current_state: leg:UP feet:NEUTRAL
+	ACTION: leg NEUTRAL idx:0
+	next_state: leg:NEUTRAL feet:NEUTRAL
+	reward: 0
+prob: 0
+--------------------
+steps: 28
+	current_state: leg:NEUTRAL feet:NEUTRAL
+	ACTION: feet DOWN idx:5
+	next_state: leg:NEUTRAL feet:DOWN
+	reward: 0
+prob: 0
+--------------------
+steps: 29
+	current_state: leg:NEUTRAL feet:DOWN
+	ACTION: leg DOWN idx:2
+	next_state: leg:DOWN feet:DOWN
+	reward: -4
+prob: 0
+--------------------
+Sum of rewards in 30 steps: 9
 ----------
-Exited with error code 1.
+Completed successfully.
