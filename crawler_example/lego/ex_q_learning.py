@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     print('Sampled MDP')
     print('-' * 20)
-    print(env.sampled_mdp)
+    print(env.sampled_transition_function)
     print('-' * 20)
     try:
         with open("./q_val_table.txt", 'w') as f:
@@ -77,8 +77,8 @@ if __name__ == '__main__':
 
     # Save the sampled MDP function
     try:
-        with open("./mdp_dict.txt", 'w') as f:
-            print(env.sampled_mdp, file=f)
+        with open("./transition_function_dict.txt", 'w') as f:
+            print(env.sampled_transition_function, file=f)
     except:
         print('Failed to save to a Reward dictionary to file')
 

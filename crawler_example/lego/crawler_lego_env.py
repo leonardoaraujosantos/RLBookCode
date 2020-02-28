@@ -7,6 +7,7 @@ try:
     from pybricks.tools import print
     from pybricks.tools import wait
     import utils_motor
+
     print('Running on Robot')
     running_on_lego = True
 except ModuleNotFoundError:
@@ -25,7 +26,7 @@ class MotorState:
 
     @staticmethod
     def val(val):
-        if val in [MotorState.NEUTRAL, MotorState.UP,  MotorState.DOWN]:
+        if val in [MotorState.NEUTRAL, MotorState.UP, MotorState.DOWN]:
             return val
         else:
             return None
@@ -72,6 +73,7 @@ class CrawlingRobotEnv:
     This class will implement a similar environment interface as seen on openAI gym, but actually
     interface with a real world-robot (Lego)
     """
+
     def __init__(self, invert_reward=False, step_angle=35, run_on_lego=True, no_change_penalty=-20):
         self.n_leg_state = 3
         self.n_feet_state = 3
@@ -108,17 +110,29 @@ class CrawlingRobotEnv:
             (MotorState.NEUTRAL, MotorState.DOWN): -self.motor_step_angle,
             (MotorState.UP, MotorState.UP): 0,
             (MotorState.UP, MotorState.NEUTRAL): -self.motor_step_angle,
-            (MotorState.UP, MotorState.DOWN): -2*self.motor_step_angle,
+            (MotorState.UP, MotorState.DOWN): -2 * self.motor_step_angle,
             (MotorState.DOWN, MotorState.DOWN): 0,
             (MotorState.DOWN, MotorState.NEUTRAL): self.motor_step_angle,
-            (MotorState.DOWN, MotorState.UP): 2*self.motor_step_angle,
+            (MotorState.DOWN, MotorState.UP): 2 * self.motor_step_angle,
         }
 
-        # Dictionary that will retain samples of experience
-        self.sampled_reward_function = {}
+        # Dictionary that will retain samples of experience, if not on lego mode we will use this to simulate
+        # if on lego mode we will capture this
+        self.sampled_reward_function = {((2, 1), 5): -7, ((0, 2), 5): -20, ((1, 2), 5): -20, ((0, 0), 2): 0,
+                                        ((0, 1), 4): -20, ((2, 1), 0): -6, ((0, 2), 0): -20, ((0, 0), 5): 0,
+                                        ((2, 2), 2): -20, ((0, 2), 3): 0, ((2, 0), 4): 0, ((2, 1), 2): -20,
+                                        ((2, 1), 4): -20, ((0, 1), 3): 0, ((1, 2), 4): 0, ((1, 1), 1): -20,
+                                        ((1, 1), 5): 0, ((1, 2), 3): 0, ((2, 0), 2): -20, ((2, 0), 3): -20,
+                                        ((1, 0), 5): 0, ((1, 2), 0): 0, ((0, 0), 1): 0, ((2, 0), 0): 0,
+                                        ((0, 0), 3): -20, ((2, 2), 0): 0, ((0, 0), 4): 0, ((0, 2), 4): 0,
+                                        ((0, 2), 2): -4, ((2, 2), 1): 0, ((1, 0), 4): 0, ((2, 2), 3): 4,
+                                        ((2, 2), 5): -20, ((1, 1), 3): 0, ((0, 1), 2): 0, ((1, 0), 3): -20,
+                                        ((1, 1), 2): 0, ((0, 0), 0): -20, ((1, 0), 0): 0, ((0, 1), 0): -20,
+                                        ((0, 1), 1): 0, ((1, 2), 1): -20, ((2, 1), 1): 0, ((2, 1), 3): 0,
+                                        ((1, 2), 2): 0, ((1, 1), 0): 0, ((0, 2), 1): 0, ((1, 0), 2): 0,
+                                        ((0, 1), 5): -22, ((2, 0), 5): -4, ((2, 2), 4): 13}
 
-
-        self.sampled_mdp = {}
+        self.sampled_transition_function = {}
 
         # Populate dictionary to convert state tuple to state indexes
         self.state_2_index = self.__get_tuple_2_index()
@@ -297,21 +311,27 @@ class CrawlingRobotEnv:
 
     def record_mdp(self, state, action, reward, next_state):
         """
-        Use the previous state/action pairs
+        Use the state/action/reward/next_state pairs from real-life experience to populate the MDP
         :param state: Current state
         :param action: action
         :param reward: Immediate reward of doing an "action" at state "state"
         :param next_state: Next state after doing an "action" at state "state"
         :return: None
         """
-        if (state, action) in self.sampled_reward_function:
-            old_reward = self.sampled_reward_function[state, action]
-            if old_reward != reward:
-                print('\t\t****Reward change for same state/action pair: (OLD)', old_reward, '(NEW)', reward)
-            self.sampled_reward_function[state, action] = reward
-        else:
-            self.sampled_reward_function[state, action] = reward
-        self.sampled_mdp[state, action] = next_state
+        if self.running_on_lego:
+            if (state, action) in self.sampled_reward_function:
+                old_reward = self.sampled_reward_function[state, action]
+                if old_reward != reward:
+                    print('\t\t****Reward change for same state/action pair: (OLD)', old_reward, '(NEW)', reward)
+                self.sampled_reward_function[state, action] = reward
+            else:
+                self.sampled_reward_function[state, action] = reward
+
+            if (state, action) in self.sampled_transition_function:
+                previous_next_state = self.sampled_transition_function[state, action]
+                if previous_next_state != next_state:
+                    raise ValueError('This should never happen on this robot ...')
+            self.sampled_transition_function[state, action] = next_state
 
     def read_sensor(self):
         return self.infrared.distance()
