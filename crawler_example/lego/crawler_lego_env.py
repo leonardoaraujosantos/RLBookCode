@@ -162,7 +162,7 @@ class CrawlingRobotEnv:
         motor_action = self.action_2_arm[action]
         if running_on_lego:
             # Get distance before move
-            wait(100)
+            # wait(100)
             distance_before_move = self.infrared.distance()
         else:
             distance_before_move = 0
@@ -171,7 +171,7 @@ class CrawlingRobotEnv:
         state = self.state
         no_state_change_penalty = self.__control_motors(motor_action)
         if running_on_lego:
-            wait(300)
+            # wait(300)
             # Get distance travelled after motors did some job(reward)
             distance_after_move = self.infrared.distance()
             reward = distance_after_move - distance_before_move
